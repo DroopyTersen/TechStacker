@@ -3,6 +3,8 @@ import { gql } from "apollo-boost";
 export default gql`
   type Query {
     categories: [Category]
+    technologies: [Tech]
+    users: [User]
   }
   type Category {
     Id: ID!
@@ -11,35 +13,34 @@ export default gql`
     Is it at the top or bottom of the stack? Lower numbers are shown first.
     """
     Position: Int!
-    # technologies: [Tech!]
+    technologies: [Tech!]
     Description: String
   }
 
   type Tech {
-    id: ID!
-    title: String
+    Id: ID!
+    Title: String
+    Link: String
+    Logo: String
+    Created: String
+    Modified: String
+    categoryIds: [Int]
     comments: [Comment]
     categories: [Category]
-    link: String
-    logo: String
+    sortOrder: Float
+    createdBy: User
+    modifiedBy: User
   }
 
   type User {
     id: ID!
+    email: String
     name: String!
     photo: String
+    department: String
+    jobTitle: String
+    office: String
     comments: [Comment]
-  }
-
-  type Comment {
-    id: ID!
-    message: String
-    author: User
-    tech: Tech
-    techId: Int
-    stackId: Int
-    authroId: Int
-    stack: Stack
   }
 
   type Stack {
