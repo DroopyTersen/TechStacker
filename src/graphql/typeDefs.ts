@@ -19,6 +19,8 @@ export default gql`
     Position: Int!
     technologies: [Tech!]
     Description: String
+    Icon: String
+    slug: String
   }
 
   type Tag {
@@ -39,6 +41,7 @@ export default gql`
     sortOrder: Float
     createdBy: User
     modifiedBy: User
+    slug: String
     tags: [Tag]
   }
   input SaveTechInput {

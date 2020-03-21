@@ -35,6 +35,9 @@ const StyledTags = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin: 0;
+  > *:last-child {
+    margin-right: 0;
+  }
 `;
 
 const StyledTag = styled.div`

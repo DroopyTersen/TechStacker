@@ -54,7 +54,7 @@ div.ControlZone {
   padding: 10px 20px;
 }
 .menu-TopNav {
-  display:none;
+  display:none !important;
 }
 div[data-automation-id='pageHeader'] {
   display:none;

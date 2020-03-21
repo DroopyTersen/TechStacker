@@ -2,6 +2,7 @@ import SPScript from "spscript";
 import Context from "spscript/lib/context/Context";
 import { Category, Tech, AppData } from "./interfaces";
 import { parseTagsString, transformTechItem } from "./dataUtils";
+import slugify from "slugify";
 
 export let getData = async function() {
   let ctx = SPScript.createContext();
@@ -17,7 +18,7 @@ let getCategories = async function(ctx: Context) {
   let odata = {
     $top: 5000,
     $orderby: "Position,Title",
-    $select: "Title,Id,Position,Description",
+    $select: "Title,Id,Position,Description,Icon",
   };
   let items: Category[] = await ctx
     .lists("TechCategories")

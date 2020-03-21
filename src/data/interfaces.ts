@@ -5,6 +5,7 @@ export interface Category {
   Description?: string;
   technologies: Tech[];
   Icon: string;
+  slug: string;
 }
 
 export interface Tech {
@@ -19,7 +20,8 @@ export interface Tech {
   EditorId: number;
   CategoryId: number;
   tags: Tag[];
-  categories: Category[];
+  category: Category;
+  slug: string;
 }
 
 export interface AppData {

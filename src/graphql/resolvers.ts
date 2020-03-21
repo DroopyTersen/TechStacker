@@ -1,6 +1,8 @@
 import { getData, saveTech } from "../data/api";
 import { AppData, Category, Tech, Tag } from "../data/interfaces";
 import { uniqBy, flatten, sortBy } from "@microsoft/sp-lodash-subset";
+import slugify from "slugify";
+
 let data: AppData;
 let waitForData = getData().then((result) => (data = result));
 
@@ -28,6 +30,9 @@ const resolvers = {
       await waitForData;
       return data.technologies.filter((t) => t.CategoryId === category.Id);
     },
+    slug: (category: Category) => {
+      return slugify(category.Title).toLowerCase();
+    },
   },
   Tech: {
     category: async (tech: Tech) => {
@@ -46,6 +51,9 @@ const resolvers = {
     modifiedBy: async (tech: Tech) => {
       await waitForData;
       return data.users.find((user) => user.id === tech.EditorId);
+    },
+    slug: async (tech: Tech) => {
+      return slugify(tech.Title).toLowerCase();
     },
   },
   Tag: {
