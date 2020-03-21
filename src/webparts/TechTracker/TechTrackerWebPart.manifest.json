@@ -1,14 +1,15 @@
-
 {
-    "$schema": "https://dev.office.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
-    "id": "935ea841-5a3f-4e58-978d-57db9c9c09c1",
-    "alias": "TechTrackerWebPart",
-    "componentType": "WebPart",
-    "version": "*",
-    "manifestVersion": 2,
-    "supportsThemeVariants": true,
-    "requiresCustomScript": false,
-    "preconfiguredEntries": [{
+  "$schema": "https://dev.office.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "935ea841-5a3f-4e58-978d-57db9c9c09c1",
+  "alias": "TechTrackerWebPart",
+  "componentType": "WebPart",
+  "version": "*",
+  "manifestVersion": 2,
+  "supportsThemeVariants": true,
+  "requiresCustomScript": false,
+  "supportsFullBleed": true,
+  "preconfiguredEntries": [
+    {
       "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
       "group": { "default": "Other" },
       "title": { "default": "TechTracker" },
@@ -17,6 +18,6 @@
       "properties": {
         "title": "TechTracker"
       }
-    }]
-  }
-  
+    }
+  ]
+}

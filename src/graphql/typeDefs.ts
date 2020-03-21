@@ -5,6 +5,10 @@ export default gql`
     categories: [Category]
     technologies: [Tech]
     users: [User]
+    tags: [Tag]
+  }
+  type Mutation {
+    saveTech(tech: SaveTechInput): Tech
   }
   type Category {
     Id: ID!
@@ -17,19 +21,33 @@ export default gql`
     Description: String
   }
 
+  type Tag {
+    title: ID!
+    technologies: [Tech]
+  }
   type Tech {
     Id: ID!
     Title: String
     Link: String
     Logo: String
+    Description: String
     Created: String
     Modified: String
-    categoryIds: [Int]
+    CategoryId: Int
     comments: [Comment]
-    categories: [Category]
+    category: Category
     sortOrder: Float
     createdBy: User
     modifiedBy: User
+    tags: [Tag]
+  }
+  input SaveTechInput {
+    Id: Int
+    Title: String!
+    CategoryId: Int!
+    Logo: String
+    Link: String
+    Tags: String
   }
 
   type User {
@@ -43,10 +61,20 @@ export default gql`
     comments: [Comment]
   }
 
+  type Comment {
+    Id: ID!
+    Message: String
+    author: User
+    tech: Tech
+    stack: Stack
+    TechId: Int
+    StackId: Int
+    AuthorId: Int
+  }
   type Stack {
-    id: ID!
-    title: String!
-    description: String
+    Id: ID!
+    Title: String!
+    Description: String
     author: User!
     technologies: [Tech!]
     comments: [Comment]

@@ -4,6 +4,7 @@ export interface Category {
   Title: string;
   Description?: string;
   technologies: Tech[];
+  Icon: string;
 }
 
 export interface Tech {
@@ -12,22 +13,24 @@ export interface Tech {
   Link: string;
   Logo: string;
   Created: string;
+  Description: string;
   Modified: string;
   AuthorId: number;
   EditorId: number;
-  categoryIds: number[];
+  CategoryId: number;
+  tags: Tag[];
   categories: Category[];
 }
 
-export interface TechListItem extends Tech {
-  CategoriesId?: {
-    results?: number[];
-  };
-}
 export interface AppData {
   categories: Category[];
   technologies: Tech[];
   users: User[];
+}
+
+export interface Tag {
+  title: string;
+  technologies: Tech[];
 }
 
 export interface User {

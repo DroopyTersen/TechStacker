@@ -1,0 +1,359 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2019/09/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=3.15.1911.0, Culture=neutral, PublicKeyToken=5e633289e95c321a" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-2210493E41DD498C99E641E77E0FFBE0">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-2210493E41DD498C99E641E77E0FFBE0" Version="1" BaseSiteTemplate="SITEPAGEPUBLISHING#0" Scope="RootSite">
+      <pnp:Lists>
+        <pnp:ListInstance Title="TechCategories" Description="" DocumentTemplate="" OnQuickLaunch="true" TemplateType="100" Url="Lists/TechCategories" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/TechCategories/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/TechCategories/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/TechCategories/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{DFA1F8AF-84B2-4B19-9959-AF4F09CD85A9}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/TechCategories/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="Position" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="Position" />
+                <FieldRef Name="Description" />
+                <FieldRef Name="Icon" />
+                <FieldRef Name="ID" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <Aggregations Value="Off" />
+              <JSLink>clienttemplates.js</JSLink>
+              <CustomFormatter />
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field ClientSideComponentId="00000000-0000-0000-0000-000000000000" Description="Is it at the top or bottom of the stack? Lower numbers are shown first." DisplayName="Position" Format="Dropdown" Name="Position" Percentage="FALSE" Required="TRUE" Title="Position" Type="Number" ID="{d3f6e7e6-aee2-4f23-9116-dfcf64d75ca0}" Version="2" StaticName="Position" SourceID="{{listid:TechCategories}}" ColName="float1" RowOrdinal="0" />
+            <Field AppendOnly="FALSE" DisplayName="Description" Format="Dropdown" IsolateStyles="FALSE" Name="Description" NumLines="6" RichText="FALSE" RichTextMode="Compatible" Title="Description" Type="Note" ID="{024c775d-3f0f-43a0-9127-b3965ea3edb6}" SourceID="{{listid:TechCategories}}" StaticName="Description" ColName="ntext2" RowOrdinal="0" />
+            <Field Description="An image url" DisplayName="Icon" Format="Dropdown" MaxLength="255" Name="Icon" Title="Icon" Type="Text" ID="{5d7f1d4c-99ec-42ed-b258-9b34453cd01e}" SourceID="{{listid:TechCategories}}" StaticName="Icon" ColName="nvarchar4" RowOrdinal="0" />
+          </pnp:Fields>
+          <pnp:DataRows UpdateBehavior="Overwrite">
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Framework</pnp:DataValue>
+              <pnp:DataValue FieldName="Position">1</pnp:DataValue>
+              <pnp:DataValue FieldName="Description">Anything that drastically changes how you write your application. React, Angular, Gatsby, Next, vanilla, etc...</pnp:DataValue>
+              <pnp:DataValue FieldName="Icon">LargeGrid</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">1_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Language</pnp:DataValue>
+              <pnp:DataValue FieldName="Position">2</pnp:DataValue>
+              <pnp:DataValue FieldName="Description">What programming language is do you write your app in? Usually this would then compile to JS.</pnp:DataValue>
+              <pnp:DataValue FieldName="Icon">Code</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">3_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Look and Feel</pnp:DataValue>
+              <pnp:DataValue FieldName="Position">5</pnp:DataValue>
+              <pnp:DataValue FieldName="Description">CSS Frameworks, Component Libraries, Design Systems, CSS in JS libraries etc...</pnp:DataValue>
+              <pnp:DataValue FieldName="Icon">Personalize</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">5_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">App Management</pnp:DataValue>
+              <pnp:DataValue FieldName="Position">3</pnp:DataValue>
+              <pnp:DataValue FieldName="Description">Things like state management, single page app routers, etc...</pnp:DataValue>
+              <pnp:DataValue FieldName="Icon">JS</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">7_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Tooling</pnp:DataValue>
+              <pnp:DataValue FieldName="Position">10</pnp:DataValue>
+              <pnp:DataValue FieldName="Description">Bundlers, Task Runners, IDEs, Linters, etc...</pnp:DataValue>
+              <pnp:DataValue FieldName="Icon">BuildDefinition</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">8_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Utility Library</pnp:DataValue>
+              <pnp:DataValue FieldName="Position">11</pnp:DataValue>
+              <pnp:DataValue FieldName="Description">Lodash, date-fns, moment etc...</pnp:DataValue>
+              <pnp:DataValue FieldName="Icon">Toolbox</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">1200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">12_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Testing</pnp:DataValue>
+              <pnp:DataValue FieldName="Position">12</pnp:DataValue>
+              <pnp:DataValue FieldName="Description">Anything related to testing your web app</pnp:DataValue>
+              <pnp:DataValue FieldName="Icon">TestCase</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">1300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">13_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+          </pnp:DataRows>
+          <pnp:Webhooks>
+            <pnp:Webhook ServerNotificationUrl="https://1-southcentralus1.pushp.svc.ms/notifications?token=w3-51001414-98ff-4fae-ba36-10eaac89b2b0" ExpiresInDays="1" />
+          </pnp:Webhooks>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="Tech" Description="" DocumentTemplate="" OnQuickLaunch="true" TemplateType="100" Url="Lists/Tech" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/Tech/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Tech/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Tech/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{A11917C1-58E2-495A-AB50-EAB671569AD8}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Tech/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="Category_x003a_Position" />
+                  <FieldRef Name="Title" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="Link" />
+                <FieldRef Name="Logo" />
+                <FieldRef Name="Category" />
+                <FieldRef Name="Category_x003a_Position" />
+                <FieldRef Name="Tags" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <Aggregations Value="Off" />
+              <JSLink>clienttemplates.js</JSLink>
+              <CustomFormatter />
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field DisplayName="Link" Format="Dropdown" MaxLength="255" Name="Link" Title="Link" Type="Text" ID="{496b6517-7e21-41f0-89b9-6e38d001a97b}" SourceID="{{listid:Tech}}" StaticName="Link" ColName="nvarchar4" RowOrdinal="0" />
+            <Field DisplayName="Logo" Format="Dropdown" MaxLength="255" Name="Logo" Title="Logo" Type="Text" ID="{ff581991-6281-41db-89d1-a643c8fe4cec}" SourceID="{{listid:Tech}}" StaticName="Logo" ColName="nvarchar5" RowOrdinal="0" />
+            <Field Type="Lookup" DisplayName="Category" Required="FALSE" EnforceUniqueValues="FALSE" List="{listid:TechCategories}" ShowField="Title" UnlimitedLengthInDocumentLibrary="FALSE" RelationshipDeleteBehavior="None" ID="{e062cceb-3648-4410-9c81-f18e3b047f5c}" SourceID="{{listid:Tech}}" StaticName="Category" Name="Category" ColName="int1" RowOrdinal="0" />
+            <Field Type="Lookup" DisplayName="Category:Position" List="{listid:TechCategories}" WebId="{siteid}" ShowField="Position" FieldRef="e062cceb-3648-4410-9c81-f18e3b047f5c" ReadOnly="TRUE" UnlimitedLengthInDocumentLibrary="FALSE" ID="{68596f68-7ef7-476f-aeca-fab25b651af4}" SourceID="{{listid:Tech}}" StaticName="Category_x003a_Position" Name="Category_x003a_Position" Version="1" />
+            <Field Type="Text" DisplayName="Tags" Description="Comma delimited list of tags (lowercase, use a dash for spaces)." Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{aa9f71cc-d690-48ec-8df6-55697da92973}" SourceID="{{listid:Tech}}" StaticName="Tags" Name="Tags" ColName="nvarchar6" RowOrdinal="0" />
+          </pnp:Fields>
+          <pnp:DataRows UpdateBehavior="Overwrite">
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">React</pnp:DataValue>
+              <pnp:DataValue FieldName="Link" />
+              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Category">1</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags" />
+              <pnp:DataValue FieldName="Order">100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">1_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Angular</pnp:DataValue>
+              <pnp:DataValue FieldName="Link" />
+              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Category">1</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags" />
+              <pnp:DataValue FieldName="Order">200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">2_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Vue</pnp:DataValue>
+              <pnp:DataValue FieldName="Link" />
+              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Category">1</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags" />
+              <pnp:DataValue FieldName="Order">300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">3_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Svelte</pnp:DataValue>
+              <pnp:DataValue FieldName="Link" />
+              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Category">1</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags" />
+              <pnp:DataValue FieldName="Order">400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">4_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Ember</pnp:DataValue>
+              <pnp:DataValue FieldName="Link">https://svelte.dev/</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://i2.wp.com/programmingwithmosh.com/wp-content/uploads/2019/12/1_OJLglSTFZ1PbwpRG0U2xXA.png?ssl=1</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">1</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags" />
+              <pnp:DataValue FieldName="Order">500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">5_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">TypeScript</pnp:DataValue>
+              <pnp:DataValue FieldName="Link" />
+              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Category">3</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags" />
+              <pnp:DataValue FieldName="Order">600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">6_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">ESNext (Javascript)</pnp:DataValue>
+              <pnp:DataValue FieldName="Link" />
+              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Category">3</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags" />
+              <pnp:DataValue FieldName="Order">700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">7_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">ES5 (Javascript)</pnp:DataValue>
+              <pnp:DataValue FieldName="Link" />
+              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Category">3</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags" />
+              <pnp:DataValue FieldName="Order">800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">8_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Flow</pnp:DataValue>
+              <pnp:DataValue FieldName="Link" />
+              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Category">3</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags" />
+              <pnp:DataValue FieldName="Order">900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">9_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">ReasonML</pnp:DataValue>
+              <pnp:DataValue FieldName="Link" />
+              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Category">3</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags" />
+              <pnp:DataValue FieldName="Order">1000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">10_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Elm</pnp:DataValue>
+              <pnp:DataValue FieldName="Link" />
+              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Category">3</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags" />
+              <pnp:DataValue FieldName="Order">1100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">11_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">CoffeeScript</pnp:DataValue>
+              <pnp:DataValue FieldName="Link" />
+              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Category">3</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags" />
+              <pnp:DataValue FieldName="Order">1200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">12_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Parcel</pnp:DataValue>
+              <pnp:DataValue FieldName="Link" />
+              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Category">8</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags">bundler</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">1300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">13_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Webpack</pnp:DataValue>
+              <pnp:DataValue FieldName="Link" />
+              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Category">8</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags">bundler</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">1400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">14_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Rollup</pnp:DataValue>
+              <pnp:DataValue FieldName="Link" />
+              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Category">8</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags">bundler</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">1500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">15_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Babel</pnp:DataValue>
+              <pnp:DataValue FieldName="Link" />
+              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Category">8</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags">compiler</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">1600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">16_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Styled Components</pnp:DataValue>
+              <pnp:DataValue FieldName="Link" />
+              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Category">5</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags">css-in-js, styling</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">1700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">17_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Bootstrap</pnp:DataValue>
+              <pnp:DataValue FieldName="Link" />
+              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Category">5</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags">css-framework, component-library</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">1800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">18_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Microsoft Fluent UI</pnp:DataValue>
+              <pnp:DataValue FieldName="Link" />
+              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Category">5</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags">component-library, design-system</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">1900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">19_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">New thing</pnp:DataValue>
+              <pnp:DataValue FieldName="Link" />
+              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Category">1</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags" />
+              <pnp:DataValue FieldName="Order">2000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">20_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">New thing 2</pnp:DataValue>
+              <pnp:DataValue FieldName="Link" />
+              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Category">13</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags">unit-testing</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">2100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">21_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+          </pnp:DataRows>
+          <pnp:Webhooks>
+            <pnp:Webhook ServerNotificationUrl="https://3-southcentralus1.pushp.svc.ms/notifications?token=w3-39656ad9-d1c6-41c7-9702-2aa160fcda1e" ExpiresInDays="1" />
+          </pnp:Webhooks>
+        </pnp:ListInstance>
+      </pnp:Lists>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>
