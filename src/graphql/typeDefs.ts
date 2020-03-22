@@ -4,6 +4,7 @@ export default gql`
   type Query {
     categories: [Category]
     technologies: [Tech]
+    tech(id: Int!): Tech
     users: [User]
     tags: [Tag]
   }

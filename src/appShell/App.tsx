@@ -1,23 +1,20 @@
 import React from "react";
 import ApolloSetup from "../graphql/ApolloSetup";
 import Router from "./router/Router";
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import TechScreen from "../Tech/TechScreen";
 
 function App({}: AppProps) {
   return (
     <StyledApp>
+      <GlobalStyle />
       <ApolloSetup>
         <Router>
           <TechScreen path="/tech" />
           <Screen path="/stacks">
             <h1>Stacks</h1>
           </Screen>
-          <Screen path="/">
-            <h1>Home</h1>
-
-            <p>This is a test</p>
-          </Screen>
+          <TechScreen path="/" />
         </Router>
       </ApolloSetup>
     </StyledApp>
@@ -59,6 +56,13 @@ const StyledApp = styled.div`
   p {
     margin-top: 0;
   }
+`;
+const GlobalStyle = createGlobalStyle`
+      .flex-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
 `;
 export interface ScreenProps {
   path?: string;

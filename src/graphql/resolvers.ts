@@ -24,6 +24,10 @@ const resolvers = {
       await waitForData;
       return sortBy(uniqBy(flatten(data.technologies.map((t) => t.tags)), "title"), "title");
     },
+    tech: async (root, { id }) => {
+      await waitForData;
+      return data.technologies.find((t) => t.Id === id);
+    },
   },
   Category: {
     technologies: async (category: Category) => {
@@ -54,6 +58,14 @@ const resolvers = {
     },
     slug: async (tech: Tech) => {
       return slugify(tech.Title).toLowerCase();
+    },
+    Logo: (tech: Tech) => {
+      // This resolver wouldn't fire if this were ever true right?
+      if (tech.Logo) {
+        return tech.Logo;
+      }
+      let category = data.categories.find((c) => c.Id === tech.CategoryId);
+      return category.Icon;
     },
   },
   Tag: {

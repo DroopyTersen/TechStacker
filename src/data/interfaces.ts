@@ -22,6 +22,8 @@ export interface Tech {
   tags: Tag[];
   category: Category;
   slug: string;
+  createdBy: User;
+  modifiedBy: User;
 }
 
 export interface AppData {

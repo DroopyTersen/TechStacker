@@ -49,14 +49,18 @@ let displayModeCSS = `
 }
 `;
 let css = `
+
 div.ControlZone {
   margin: 0;
-  padding: 10px 20px;
+  padding: 0px 20px;
 }
 .menu-TopNav {
   display:none !important;
 }
 div[data-automation-id='pageHeader'] {
+  display:none;
+}
+div[data-automationid='SiteHeader'] {
   display:none;
 }
 .Canvas .CanvasZone {
