@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
 import gql from "graphql-tag";
 import { useQuery } from "react-apollo";
@@ -54,6 +54,12 @@ function Error({ error }) {
 
 function Header() {
   let { filter, setFilter } = useTechFilter();
+  let searchRef = useRef(null);
+  useEffect(() => {
+    if (searchRef.current) {
+      searchRef.current.focus();
+    }
+  }, [filter]);
   return (
     <StyledHeader className="flex-row screen-header">
       <div className="flex-row" style={{ justifyContent: "flex-start" }}>
@@ -73,6 +79,7 @@ function Header() {
           onChange={(newVal) => setFilter(newVal)}
           placeholder="Filter..."
           autoFocus={true}
+          componentRef={searchRef}
         />
       </div>
       <div className="actions">
