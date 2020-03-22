@@ -24,6 +24,7 @@ function TechCard({ tech }: TechCardProps) {
       <Link href="#" onClick={onDetailsClick}>
         <h3 className="tech-title">{tech.Title}</h3>
       </Link>
+      <Card.Description shave={60}>{tech.Tagline}</Card.Description>
     </Card>
   );
 }

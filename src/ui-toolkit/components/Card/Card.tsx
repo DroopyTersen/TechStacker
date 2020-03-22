@@ -50,7 +50,7 @@ const StyledCard = styled.div`
     overflow: hidden;
   &.centered {
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
   }
 
   /* &:hover {

@@ -43,7 +43,8 @@ export let saveTech = async function(tech: Tech) {
 let getTech = async function(ctx: Context) {
   let odata = {
     $top: 5000,
-    $select: "Title,Link,Logo,Id,CategoryId,Description,Tags,Created,Modified,EditorId,AuthorId",
+    $select:
+      "Title,Link,Logo,Id,CategoryId,Description,Tagline,Tags,Created,Modified,EditorId,AuthorId",
     $orderby: "Title",
   };
   let items: any[] = await ctx.lists("Tech").getItems(SPScript.utils.qs.fromObj(odata));

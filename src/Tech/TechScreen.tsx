@@ -144,6 +144,7 @@ const QUERY = gql`
       Title
       Id
       Position
+      Description
       Icon
       slug
       technologies {
@@ -151,6 +152,7 @@ const QUERY = gql`
         Id
         Logo
         Link
+        Tagline
         slug
         tags {
           title

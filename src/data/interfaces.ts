@@ -11,6 +11,7 @@ export interface Category {
 export interface Tech {
   Id: number;
   Title: string;
+  Tagline: string;
   Link: string;
   Logo: string;
   Created: string;

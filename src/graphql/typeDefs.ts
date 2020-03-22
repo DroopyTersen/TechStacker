@@ -34,6 +34,7 @@ export default gql`
     Link: String
     Logo: String
     Description: String
+    Tagline: String
     Created: String
     Modified: String
     CategoryId: Int
