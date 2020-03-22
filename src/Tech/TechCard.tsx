@@ -6,6 +6,7 @@ import BackgroundImage from "../ui-toolkit/components/primitives/BackgroundImage
 import Card from "../ui-toolkit/components/Card/Card";
 import { useTechDetailsPanel } from "./TechPanelContext";
 import Link from "../ui-toolkit/components/primitives/Link";
+
 function TechCard({ tech }: TechCardProps) {
   let tags = tech.tags.map((t) => ({ label: t.title }));
   tags.unshift({ label: tech.category.slug });
@@ -16,16 +17,23 @@ function TechCard({ tech }: TechCardProps) {
     detailsPanel.open(tech.Id);
   };
   return (
-    <Card centered>
-      <Card.Image size={90}>
+    <StyledCard centered>
+      <Card.Image
+        title="See Details"
+        url={"#"}
+        className="tech-image"
+        size={90}
+        onClick={onDetailsClick}
+      >
         <BackgroundImage src={tech.Logo} style={{ width: "60px", height: "60px" }} />
       </Card.Image>
       <Card.Tags tags={tags}></Card.Tags>
-      <Link href="#" onClick={onDetailsClick}>
-        <h3 className="tech-title">{tech.Title}</h3>
-      </Link>
+      <Card.Title className="tech-title" title="See Details" url="#" onClick={onDetailsClick}>
+        {tech.Title}
+      </Card.Title>
+
       <Card.Description shave={60}>{tech.Tagline}</Card.Description>
-    </Card>
+    </StyledCard>
   );
 }
 
@@ -37,10 +45,18 @@ export interface TechCardProps {
 
 const StyledCard = styled(Card)`
   position: relative;
-  a {
-    color: #0f0;
+  .tech-image:hover {
+    opacity: 0.9;
+    cursor: pointer;
   }
-  a:hover {
-    color: #f00;
-  }
+  /* a.tech-title {
+    .tech-title {
+      color: #0f0;
+    }
+    &:hover {
+      .tech-title {
+        color: #f00;
+      }
+    }
+  } */
 `;
