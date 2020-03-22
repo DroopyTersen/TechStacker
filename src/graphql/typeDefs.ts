@@ -38,6 +38,7 @@ export default gql`
     Created: String
     Modified: String
     CategoryId: Int
+    Tags: String
     comments: [Comment]
     category: Category
     sortOrder: Float
@@ -50,9 +51,11 @@ export default gql`
     Id: Int
     Title: String!
     CategoryId: Int!
+    Tagline: String
     Logo: String
     Link: String
     Tags: String
+    Description: String
   }
 
   type User {

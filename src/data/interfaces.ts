@@ -20,6 +20,7 @@ export interface Tech {
   AuthorId: number;
   EditorId: number;
   CategoryId: number;
+  Tags: string;
   tags: Tag[];
   category: Category;
   slug: string;

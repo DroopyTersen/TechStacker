@@ -8,13 +8,17 @@ import BackgroundImage from "../ui-toolkit/components/primitives/BackgroundImage
 import styled from "styled-components";
 import ReactMarkdown from "react-markdown";
 import Link from "../ui-toolkit/components/primitives/Link";
-function TechDetails({ id = 0 }) {
+import { IconButton } from "office-ui-fabric-react/lib/Button";
+import { useRouter } from "../appShell/router/Router";
+function TechDetails({ techId = 0, onEdit }) {
+  let { navigate } = useRouter();
   let { data, error, loading } = useQuery<{ tech: Tech }>(QUERY, {
-    variables: { id: parseInt(id + "", 10) },
+    variables: { id: parseInt(techId + "", 10) },
   });
   if (loading) return null;
   if (error) return <div>Error: {JSON.stringify(error)}</div>;
   let tech = data.tech;
+
   return (
     <StyledDetails>
       <div className="flex-row details-header">
@@ -30,12 +34,31 @@ function TechDetails({ id = 0 }) {
           </Link>
         </div>
 
-        <Persona
-          photoSize="35px"
-          photo={tech.modifiedBy.photo}
-          title={tech.modifiedBy.name}
-          subTitle={new Date(tech.Modified).toLocaleDateString()}
-        />
+        <div className="flex-row" style={{ justifyContent: "flex-end" }}>
+          <Persona
+            photoSize="35px"
+            photo={tech.modifiedBy.photo}
+            title={tech.modifiedBy.name}
+            subTitle={new Date(tech.Modified).toLocaleDateString()}
+          />
+          <IconButton
+            text="Manage"
+            iconProps={{ iconName: "MoreVertical" }}
+            menuProps={{
+              isBeakVisible: false,
+              beakWidth: 0,
+              items: [
+                {
+                  key: "edit",
+                  text: "Edit",
+                  iconProps: { iconName: "Edit" },
+                  onClick: () => (onEdit ? onEdit(techId) : navigate("/tech/edit", { techId })),
+                },
+                { key: "delete", text: "Delete", iconProps: { iconName: "Trash" } },
+              ],
+            }}
+          ></IconButton>
+        </div>
       </div>
       {tech.Link && (
         <div>
@@ -44,6 +67,7 @@ function TechDetails({ id = 0 }) {
           </Link>
         </div>
       )}
+      <p>{tech.Tagline}</p>
       <div>
         <ReactMarkdown source={tech.Description} />
       </div>
@@ -67,6 +91,7 @@ const QUERY = gql`
       Title
       Description
       Link
+      Tagline
       Logo
       Created
       Modified

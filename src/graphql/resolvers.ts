@@ -1,19 +1,21 @@
-import { getData, saveTech } from "../data/api";
-import { AppData, Category, Tech, Tag } from "../data/interfaces";
+import { data, getData, saveTech } from "../data/api";
+import { Category, Tech, Tag } from "../data/interfaces";
 import { uniqBy, flatten, sortBy } from "@microsoft/sp-lodash-subset";
 import slugify from "slugify";
 
-let data: AppData;
-let waitForData = getData().then((result) => (data = result));
+let waitForData = getData();
 
 const resolvers = {
   Query: {
     categories: async (root, args, context, info) => {
       await waitForData;
+      console.log("resolvers Query.categories", data.technologies);
       return data.categories;
     },
     technologies: async (root, args, context, info) => {
       await waitForData;
+      console.log("resolvers Query.technologies", data.technologies);
+
       return data.technologies;
     },
     users: async (root, args, context, info) => {

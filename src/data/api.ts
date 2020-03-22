@@ -2,8 +2,7 @@ import SPScript from "spscript";
 import Context from "spscript/lib/context/Context";
 import { Category, Tech, AppData } from "./interfaces";
 import { parseTagsString, transformTechItem } from "./dataUtils";
-import slugify from "slugify";
-
+export let data: AppData = null;
 export let getData = async function() {
   let ctx = SPScript.createContext();
   let [categories, technologies, users] = await Promise.all([
@@ -11,7 +10,7 @@ export let getData = async function() {
     getTech(ctx),
     getUsers(ctx),
   ]);
-  return { categories, technologies, users } as AppData;
+  data = { categories, technologies, users };
 };
 
 let getCategories = async function(ctx: Context) {
@@ -28,7 +27,8 @@ let getCategories = async function(ctx: Context) {
 };
 
 export let saveTech = async function(tech: Tech) {
-  let list = SPScript.createContext().lists("Tech");
+  let ctx = SPScript.createContext();
+  let list = ctx.lists("Tech");
   let item;
   if (!tech.Id) {
     item = await list.addItem(tech);
@@ -36,7 +36,8 @@ export let saveTech = async function(tech: Tech) {
     await list.updateItem(tech.Id, tech);
     item = await list.getItemById(tech.Id);
   }
-
+  data.technologies = await getTech(ctx);
+  console.log("UPDATED DATA.technologies", data.technologies);
   return transformTechItem(item);
 };
 

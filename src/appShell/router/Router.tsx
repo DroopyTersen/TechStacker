@@ -3,8 +3,7 @@ import React from "react";
 import useLocation from "./useLocation";
 
 export const navigate = (path: string, data: any = {}) => {
-  if (!data.locationId) data.locationId = "";
-  if (!data.areaId) data.areaId = "";
+  if (!data.techId) data.techId = "";
   updateUrl({ path, data });
 };
 export const getQueryStringData = function(): any {

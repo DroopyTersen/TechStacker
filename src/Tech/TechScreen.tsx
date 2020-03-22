@@ -10,8 +10,11 @@ import { SearchBox } from "office-ui-fabric-react/lib/SearchBox";
 import { TechDetailsPanel } from "./TechPanelContext";
 import Link from "../ui-toolkit/components/primitives/Link";
 import BackgroundImage from "../ui-toolkit/components/primitives/BackgroundImage";
+import { useRouter } from "../appShell/router/Router";
 export default function TechScreen({ path = "" }) {
-  let { data, error, loading } = useQuery<{ categories: Category[] }>(QUERY);
+  let { data, error, loading } = useQuery<{ categories: Category[] }>(QUERY, {
+    fetchPolicy: "network-only",
+  });
   if (loading) return null;
   if (error) return <Error error={error} />;
   return (
@@ -55,6 +58,7 @@ function Error({ error }) {
 function Header() {
   let { filter, setFilter } = useTechFilter();
   let searchRef = useRef(null);
+  let { navigate } = useRouter();
   useEffect(() => {
     if (searchRef.current) {
       searchRef.current.focus();
@@ -83,7 +87,9 @@ function Header() {
         />
       </div>
       <div className="actions">
-        <PrimaryButton iconProps={{ iconName: "Add" }}>Add Tech</PrimaryButton>
+        <PrimaryButton iconProps={{ iconName: "Add" }} onClick={() => navigate("/tech/new")}>
+          Add Tech
+        </PrimaryButton>
       </div>
     </StyledHeader>
   );

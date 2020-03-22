@@ -3,6 +3,7 @@ import ApolloSetup from "../graphql/ApolloSetup";
 import Router from "./router/Router";
 import styled, { createGlobalStyle } from "styled-components";
 import TechScreen from "../Tech/TechScreen";
+import TechFormScreen from "../Tech/TechFormScreen";
 
 function App({}: AppProps) {
   return (
@@ -10,7 +11,10 @@ function App({}: AppProps) {
       <GlobalStyle />
       <ApolloSetup>
         <Router>
+          <TechFormScreen path="/tech/new" />
+          <TechFormScreen path="/tech/edit" />
           <TechScreen path="/tech" />
+
           <Screen path="/stacks">
             <h1>Stacks</h1>
           </Screen>
