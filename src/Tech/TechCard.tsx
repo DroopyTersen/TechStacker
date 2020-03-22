@@ -8,7 +8,7 @@ import Card from "../ui-toolkit/components/Card/Card";
 function TechCard({ tech }: TechCardProps) {
   let image = tech.Logo || tech.category.Icon;
   let tags = tech.tags.map((t) => ({ label: t.title }));
-  tags.unshift({ label: tech.category.Title });
+  tags.unshift({ label: tech.category.slug });
   return (
     <Card centered>
       <Card.Image size={90}>

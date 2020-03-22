@@ -91,6 +91,7 @@ const QUERY = gql`
         category {
           Title
           Icon
+          slug
         }
       }
     }
