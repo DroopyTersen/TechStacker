@@ -98,11 +98,14 @@ function Header() {
 const StyledHeader = styled.div`
   flex-wrap: wrap;
   margin-right: -20px;
+
   h1.screen-title {
-    font-size: 1.5em;
+    font-size: 1.8em;
     font-weight: 400;
     font-family: monospace;
     color: #217189;
+    letter-spacing: -3px;
+    text-shadow: 1px 1px 3px #0000001a;
     span {
       color: #9f9962;
     }
@@ -116,12 +119,27 @@ const StyledHeader = styled.div`
     display: flex;
     justify-content: flex-end;
   }
+  /* STACK on mobile */
+  @media only screen and (max-width: 700px) {
+    & {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      margin-right: 0;
+      > * {
+        margin-top: 5px;
+        margin-right: 0;
+      }
+      .search {
+        width: 100%;
+      }
+    }
+  }
 `;
 
 const StyledScreen = styled.div`
   position: relative;
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 240px 1fr;
   grid-template-rows: 75px 1fr;
   grid-template-areas: "header header" "left main";
   .screen-header {
@@ -148,6 +166,14 @@ const StyledScreen = styled.div`
   .main {
     grid-area: main;
     overflow: hidden;
+  }
+
+  @media only screen and (max-width: 700px) {
+    & {
+      grid-template-columns: 1fr;
+      grid-template-rows: 120px;
+      grid-template-areas: "header" "left" "main";
+    }
   }
 `;
 

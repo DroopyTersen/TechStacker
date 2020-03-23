@@ -66,6 +66,28 @@ const GlobalStyle = createGlobalStyle`
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position:relative;
+      }
+      .flex-start {
+          justify-content: flex-start;
+          margin-right: -10px;
+          >* {
+              margin-right: 10px;
+          }
+      }
+      .flex-center {
+        justify-content: center;
+          margin-left: -10px;
+          >* {
+              margin-left: 10px;
+          }
+      }
+      .flex-end {
+          justify-content: flex-end;
+          margin-left: -10px;
+          >* {
+              margin-left: 10px;
+          }
       }
 `;
 export interface ScreenProps {

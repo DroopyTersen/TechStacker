@@ -31,19 +31,43 @@ export default function TechForm({ initial, onSuccess, onCancel }: TechFormProps
   };
   return (
     <StyledForm onSubmit={onSubmit}>
+      <div className="flex-row flex-end form-actions-top">
+        <Button onClick={onCancel}>Cancel</Button>
+        <PrimaryButton disabled={status !== Status.Valid} type="submit">
+          Save
+        </PrimaryButton>
+      </div>
       <Textbox name="Title" item={item} update={update} required />
       <Textbox name="Link" item={item} update={update} />
       <div className="logo-preview">
         <img src={item.Logo || PLACEHOLDER_LOGO} />
       </div>
       <Textbox name="Logo" item={item} update={update} />
+
+      <Textbox name="Tagline" item={item} update={update} multiline />
+      <Textbox name="Tags" item={item} update={update} description="Comma delimited list of tags" />
       <div className="form-control">
         <CateogoryPicker value={item.CategoryId} onChange={(id) => update("CategoryId", id)} />
       </div>
-      <Textbox name="Tagline" item={item} update={update} multiline />
-      <Textbox name="Tags" item={item} update={update} description="Comma delimited list of tags" />
-      <Textbox name="Description" item={item} update={update} multiline autoAdjustHeight />
-      <div className="form-actions">
+      <Textbox
+        name="Description"
+        item={item}
+        update={update}
+        multiline
+        autoAdjustHeight
+        placeholder={`## Write in Markdown
+        
+**Pros**
+      
+- Thing One
+- Thing Two
+
+**Cons**
+
+- Thing One
+- Thing Two`}
+      />
+      <div className="flex-row flex-end form-actions-bottom">
         <Button onClick={onCancel}>Cancel</Button>
         <PrimaryButton disabled={status !== Status.Valid} type="submit">
           Save
@@ -71,6 +95,7 @@ function Textbox({ name, item, update, label = "", ...rest }) {
 const StyledForm = styled.form`
   position: relative;
   max-width: 600px;
+  /* margin-top: -55px; */
   .form-control {
     margin-bottom: 12px;
   }
@@ -81,12 +106,13 @@ const StyledForm = styled.form`
       height: 120px;
     }
   }
-  .form-actions {
-    display: flex;
-    margin-right: -5px;
-    justify-content: center;
-    > * {
-      margin-right: 5px;
+  @media only screen and (min-width: 640px) {
+    .form-actions-top {
+      position: absolute;
+      display: inline-block;
+      top: -55px;
+      right: 0;
+      margin-bottom: 20px;
     }
   }
 `;

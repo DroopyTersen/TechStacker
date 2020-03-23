@@ -7,12 +7,15 @@ import Card from "../ui-toolkit/components/Card/Card";
 import { useTechDetailsPanel } from "./TechPanelContext";
 import Link from "../ui-toolkit/components/primitives/Link";
 import { useTechFilter } from "./TechFilterContext";
+import Rating from "../components/inputs/Rating";
 
 function TechCard({ tech }: TechCardProps) {
   let tags = tech.tags.map((t) => ({ label: t.title }));
   let { setFilter } = useTechFilter();
   tags.unshift({ label: tech.category.slug });
   let detailsPanel = useTechDetailsPanel();
+  let [rating, setRating] = React.useState(null);
+
   let onDetailsClick = (e) => {
     e.preventDefault();
     console.log("HERE", tech.Id);
@@ -31,6 +34,7 @@ function TechCard({ tech }: TechCardProps) {
         <BackgroundImage src={tech.Logo} style={{ width: "60px", height: "60px" }} />
       </Card.Image>
       <Card.Tags>
+        <Card.Tag>{tech.category.slug}</Card.Tag>
         {tech.tags.map((tag) => (
           <Card.Tag
             url="#"
@@ -48,6 +52,9 @@ function TechCard({ tech }: TechCardProps) {
       </Card.Title>
 
       <Card.Description shave={60}>{tech.Tagline}</Card.Description>
+      <Card.Footer>
+        <Rating value={rating} onChange={setRating} />
+      </Card.Footer>
     </StyledCard>
   );
 }
@@ -60,6 +67,9 @@ export interface TechCardProps {
 
 const StyledCard = styled(Card)`
   position: relative;
+  .tech-image.card-image {
+    margin: 0px auto;
+  }
   .tech-image:hover {
     opacity: 0.9;
     cursor: pointer;

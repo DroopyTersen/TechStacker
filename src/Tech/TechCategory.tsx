@@ -22,7 +22,7 @@ function TechCategory({ category }: TechCategoryProps) {
       </div>
 
       {!!technologies.length && (
-        <Grid size={"300px"}>
+        <Grid size={"350px"}>
           {technologies.map((tech) => (
             <TechCard tech={tech} />
           ))}

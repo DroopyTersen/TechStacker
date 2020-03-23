@@ -31,7 +31,12 @@ export function TechDetailsPanel({ children }) {
   return (
     <TechPanelContext.Provider value={{ isOpen, open, close, techId, mode }}>
       {children}
-      <Panel isOpen={isOpen} onDismiss={() => close()} type={PanelType.large} isLightDismiss={true}>
+      <Panel
+        isOpen={isOpen}
+        onDismiss={() => close()}
+        type={PanelType.medium}
+        isLightDismiss={true}
+      >
         {mode === "display" && <TechDetails techId={techId} onEdit={() => setMode("edit")} />}
         {mode === "edit" && (
           <TechFormScreen

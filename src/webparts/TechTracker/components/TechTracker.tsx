@@ -66,4 +66,7 @@ div[data-automationid='SiteHeader'] {
 .Canvas .CanvasZone {
   padding-right: 0;
 }
+[aria-label='Get the mobile app'] {
+  display:none;
+}
 `;

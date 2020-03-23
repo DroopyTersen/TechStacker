@@ -1,5 +1,5 @@
 Param(
-    $Url = "https://skylinespark.sharepoint.com/sites/apps",
+    $Url = "https://myskyline365.sharepoint.com/sites/TechTracker",
     [switch] $SkipBuild,
     [ValidateSet("Site", "Tenant")]
     $Scope = "Site"

@@ -2,7 +2,7 @@ import React from "react";
 import gql from "graphql-tag";
 import { useQuery } from "react-apollo";
 import { Tech } from "../data/interfaces";
-import Tags from "../ui-toolkit/components/primitives/Tags";
+import Tags, { Tag } from "../ui-toolkit/components/primitives/Tags";
 import Persona from "../ui-toolkit/components/Persona/Persona";
 import BackgroundImage from "../ui-toolkit/components/primitives/BackgroundImage";
 import styled from "styled-components";
@@ -10,10 +10,11 @@ import ReactMarkdown from "react-markdown";
 import Link from "../ui-toolkit/components/primitives/Link";
 import { IconButton } from "office-ui-fabric-react/lib/Button";
 import { useRouter } from "../appShell/router/Router";
+import { useApolloQuery } from "../graphql/ApolloSetup";
 function TechDetails({ techId = 0, onEdit }) {
   let { navigate } = useRouter();
-  let { data, error, loading } = useQuery<{ tech: Tech }>(QUERY, {
-    variables: { id: parseInt(techId + "", 10) },
+  let { data, error, loading } = useApolloQuery<{ tech: Tech }>(QUERY, {
+    id: parseInt(techId + "", 10),
   });
   if (loading) return null;
   if (error) return <div>Error: {JSON.stringify(error)}</div>;
@@ -23,15 +24,20 @@ function TechDetails({ techId = 0, onEdit }) {
     <StyledDetails>
       <div className="flex-row details-header">
         <div className="flex-row">
-          <Link href={tech.Link}>
+          <Link href={tech.Link} title={tech.Link}>
             <BackgroundImage
               src={tech.Logo}
               style={{ width: "60px", height: "60px", marginRight: "15px" }}
             />
           </Link>
-          <Link href={tech.Link}>
+          <Link href={tech.Link} title={tech.Link}>
             <h1>{tech.Title}</h1>
           </Link>
+          <IconButton
+            iconProps={{ iconName: "Edit" }}
+            onClick={() => (onEdit ? onEdit(techId) : navigate("/tech/edit", { techId }))}
+            title="Edit"
+          />
         </div>
 
         <div className="flex-row" style={{ justifyContent: "flex-end" }}>
@@ -41,23 +47,6 @@ function TechDetails({ techId = 0, onEdit }) {
             title={tech.modifiedBy.name}
             subTitle={new Date(tech.Modified).toLocaleDateString()}
           />
-          <IconButton
-            text="Manage"
-            iconProps={{ iconName: "MoreVertical" }}
-            menuProps={{
-              isBeakVisible: false,
-              beakWidth: 0,
-              items: [
-                {
-                  key: "edit",
-                  text: "Edit",
-                  iconProps: { iconName: "Edit" },
-                  onClick: () => (onEdit ? onEdit(techId) : navigate("/tech/edit", { techId })),
-                },
-                { key: "delete", text: "Delete", iconProps: { iconName: "Trash" } },
-              ],
-            }}
-          ></IconButton>
         </div>
       </div>
       {tech.Link && (
@@ -68,6 +57,7 @@ function TechDetails({ techId = 0, onEdit }) {
         </div>
       )}
       <p>{tech.Tagline}</p>
+      <Tags tags={tech.tags.map((t) => ({ label: t.title }))} />
       <div>
         <ReactMarkdown source={tech.Description} />
       </div>
