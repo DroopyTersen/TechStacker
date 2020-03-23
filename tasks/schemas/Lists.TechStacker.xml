@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2019/09/ProvisioningSchema">
   <pnp:Preferences Generator="OfficeDevPnP.Core, Version=3.15.1911.0, Culture=neutral, PublicKeyToken=5e633289e95c321a" />
-  <pnp:Templates ID="CONTAINER-TEMPLATE-2210493E41DD498C99E641E77E0FFBE0">
-    <pnp:ProvisioningTemplate ID="TEMPLATE-2210493E41DD498C99E641E77E0FFBE0" Version="1" BaseSiteTemplate="SITEPAGEPUBLISHING#0" Scope="RootSite">
+  <pnp:Templates ID="CONTAINER-TEMPLATE-E0C17C00A8C142339A6F009A74E5247E">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-E0C17C00A8C142339A6F009A74E5247E" Version="1" BaseSiteTemplate="SITEPAGEPUBLISHING#0" Scope="RootSite">
       <pnp:Lists>
         <pnp:ListInstance Title="TechCategories" Description="" DocumentTemplate="" OnQuickLaunch="true" TemplateType="100" Url="Lists/TechCategories" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/TechCategories/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/TechCategories/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/TechCategories/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
           <pnp:ContentTypeBindings>
@@ -36,19 +36,19 @@
           </pnp:Fields>
           <pnp:DataRows UpdateBehavior="Overwrite">
             <pnp:DataRow>
-              <pnp:DataValue FieldName="Title">Framework</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">Frameworks</pnp:DataValue>
               <pnp:DataValue FieldName="Position">1</pnp:DataValue>
               <pnp:DataValue FieldName="Description">Anything that drastically changes how you write your application. React, Angular, Gatsby, Next, vanilla, etc...</pnp:DataValue>
-              <pnp:DataValue FieldName="Icon">LargeGrid</pnp:DataValue>
+              <pnp:DataValue FieldName="Icon">https://myskyline365.sharepoint.com/:i:/r/sites/TechStacker/SiteAssets/react-hooks.png?csf=1&amp;e=xVIjQY</pnp:DataValue>
               <pnp:DataValue FieldName="Order">100</pnp:DataValue>
               <pnp:DataValue FieldName="FileLeafRef">1_.000</pnp:DataValue>
               <pnp:DataValue FieldName="MetaInfo" />
             </pnp:DataRow>
             <pnp:DataRow>
-              <pnp:DataValue FieldName="Title">Language</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">JS Flavors</pnp:DataValue>
               <pnp:DataValue FieldName="Position">2</pnp:DataValue>
               <pnp:DataValue FieldName="Description">What programming language is do you write your app in? Usually this would then compile to JS.</pnp:DataValue>
-              <pnp:DataValue FieldName="Icon">Code</pnp:DataValue>
+              <pnp:DataValue FieldName="Icon">https://myskyline365.sharepoint.com/:i:/r/sites/TechStacker/SiteAssets/foundation.png?csf=1&amp;e=zBvdU0</pnp:DataValue>
               <pnp:DataValue FieldName="Order">300</pnp:DataValue>
               <pnp:DataValue FieldName="FileLeafRef">3_.000</pnp:DataValue>
               <pnp:DataValue FieldName="MetaInfo" />
@@ -57,16 +57,16 @@
               <pnp:DataValue FieldName="Title">Look and Feel</pnp:DataValue>
               <pnp:DataValue FieldName="Position">5</pnp:DataValue>
               <pnp:DataValue FieldName="Description">CSS Frameworks, Component Libraries, Design Systems, CSS in JS libraries etc...</pnp:DataValue>
-              <pnp:DataValue FieldName="Icon">Personalize</pnp:DataValue>
+              <pnp:DataValue FieldName="Icon">https://myskyline365.sharepoint.com/:i:/r/sites/TechStacker/SiteAssets/css-selectors.png?csf=1&amp;e=goltQa</pnp:DataValue>
               <pnp:DataValue FieldName="Order">500</pnp:DataValue>
               <pnp:DataValue FieldName="FileLeafRef">5_.000</pnp:DataValue>
               <pnp:DataValue FieldName="MetaInfo" />
             </pnp:DataRow>
             <pnp:DataRow>
-              <pnp:DataValue FieldName="Title">App Management</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">Data Layer</pnp:DataValue>
               <pnp:DataValue FieldName="Position">3</pnp:DataValue>
               <pnp:DataValue FieldName="Description">Things like state management, single page app routers, etc...</pnp:DataValue>
-              <pnp:DataValue FieldName="Icon">JS</pnp:DataValue>
+              <pnp:DataValue FieldName="Icon">https://myskyline365.sharepoint.com/:i:/r/sites/TechStacker/SiteAssets/performance.png?csf=1&amp;e=32rxis</pnp:DataValue>
               <pnp:DataValue FieldName="Order">700</pnp:DataValue>
               <pnp:DataValue FieldName="FileLeafRef">7_.000</pnp:DataValue>
               <pnp:DataValue FieldName="MetaInfo" />
@@ -75,16 +75,16 @@
               <pnp:DataValue FieldName="Title">Tooling</pnp:DataValue>
               <pnp:DataValue FieldName="Position">10</pnp:DataValue>
               <pnp:DataValue FieldName="Description">Bundlers, Task Runners, IDEs, Linters, etc...</pnp:DataValue>
-              <pnp:DataValue FieldName="Icon">BuildDefinition</pnp:DataValue>
+              <pnp:DataValue FieldName="Icon">https://myskyline365.sharepoint.com/:i:/r/sites/TechStacker/SiteAssets/cli-tooling.png?csf=1&amp;e=pcGu1P</pnp:DataValue>
               <pnp:DataValue FieldName="Order">800</pnp:DataValue>
               <pnp:DataValue FieldName="FileLeafRef">8_.000</pnp:DataValue>
               <pnp:DataValue FieldName="MetaInfo" />
             </pnp:DataRow>
             <pnp:DataRow>
-              <pnp:DataValue FieldName="Title">Utility Library</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">Utility Libraries</pnp:DataValue>
               <pnp:DataValue FieldName="Position">11</pnp:DataValue>
               <pnp:DataValue FieldName="Description">Lodash, date-fns, moment etc...</pnp:DataValue>
-              <pnp:DataValue FieldName="Icon">Toolbox</pnp:DataValue>
+              <pnp:DataValue FieldName="Icon">https://myskyline365.sharepoint.com/:i:/r/sites/TechStacker/SiteAssets/utilities.png?csf=1&amp;e=1vGb7F</pnp:DataValue>
               <pnp:DataValue FieldName="Order">1200</pnp:DataValue>
               <pnp:DataValue FieldName="FileLeafRef">12_.000</pnp:DataValue>
               <pnp:DataValue FieldName="MetaInfo" />
@@ -93,17 +93,17 @@
               <pnp:DataValue FieldName="Title">Testing</pnp:DataValue>
               <pnp:DataValue FieldName="Position">12</pnp:DataValue>
               <pnp:DataValue FieldName="Description">Anything related to testing your web app</pnp:DataValue>
-              <pnp:DataValue FieldName="Icon">TestCase</pnp:DataValue>
+              <pnp:DataValue FieldName="Icon">https://myskyline365.sharepoint.com/:i:/r/sites/TechStacker/SiteAssets/testing.png?csf=1&amp;e=g3IxoC</pnp:DataValue>
               <pnp:DataValue FieldName="Order">1300</pnp:DataValue>
               <pnp:DataValue FieldName="FileLeafRef">13_.000</pnp:DataValue>
               <pnp:DataValue FieldName="MetaInfo" />
             </pnp:DataRow>
           </pnp:DataRows>
           <pnp:Webhooks>
-            <pnp:Webhook ServerNotificationUrl="https://1-southcentralus1.pushp.svc.ms/notifications?token=w3-51001414-98ff-4fae-ba36-10eaac89b2b0" ExpiresInDays="1" />
+            <pnp:Webhook ServerNotificationUrl="https://3-southcentralus1.pushp.svc.ms/notifications?token=w2-c07486c2-dae5-4b19-a4d9-a869e79ce5b6" ExpiresInDays="1" />
           </pnp:Webhooks>
         </pnp:ListInstance>
-        <pnp:ListInstance Title="Tech" Description="" DocumentTemplate="" OnQuickLaunch="true" TemplateType="100" Url="Lists/Tech" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/Tech/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Tech/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Tech/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+        <pnp:ListInstance Title="Tech" Description="" DocumentTemplate="" OnQuickLaunch="true" TemplateType="100" Url="Lists/Tech" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="100" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/Tech/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Tech/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Tech/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
           <pnp:ContentTypeBindings>
             <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
             <pnp:ContentTypeBinding ContentTypeID="0x0120" />
@@ -118,11 +118,14 @@
               </Query>
               <ViewFields>
                 <FieldRef Name="LinkTitle" />
+                <FieldRef Name="Tagline" />
                 <FieldRef Name="Link" />
                 <FieldRef Name="Logo" />
                 <FieldRef Name="Category" />
                 <FieldRef Name="Category_x003a_Position" />
                 <FieldRef Name="Tags" />
+                <FieldRef Name="Description" />
+                <FieldRef Name="ID" />
               </ViewFields>
               <RowLimit Paged="TRUE">30</RowLimit>
               <Aggregations Value="Off" />
@@ -136,74 +139,100 @@
             <Field Type="Lookup" DisplayName="Category" Required="FALSE" EnforceUniqueValues="FALSE" List="{listid:TechCategories}" ShowField="Title" UnlimitedLengthInDocumentLibrary="FALSE" RelationshipDeleteBehavior="None" ID="{e062cceb-3648-4410-9c81-f18e3b047f5c}" SourceID="{{listid:Tech}}" StaticName="Category" Name="Category" ColName="int1" RowOrdinal="0" />
             <Field Type="Lookup" DisplayName="Category:Position" List="{listid:TechCategories}" WebId="{siteid}" ShowField="Position" FieldRef="e062cceb-3648-4410-9c81-f18e3b047f5c" ReadOnly="TRUE" UnlimitedLengthInDocumentLibrary="FALSE" ID="{68596f68-7ef7-476f-aeca-fab25b651af4}" SourceID="{{listid:Tech}}" StaticName="Category_x003a_Position" Name="Category_x003a_Position" Version="1" />
             <Field Type="Text" DisplayName="Tags" Description="Comma delimited list of tags (lowercase, use a dash for spaces)." Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{aa9f71cc-d690-48ec-8df6-55697da92973}" SourceID="{{listid:Tech}}" StaticName="Tags" Name="Tags" ColName="nvarchar6" RowOrdinal="0" />
+            <Field Type="Note" DisplayName="Description" Description="Supports markdown" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" NumLines="6" RichText="FALSE" Sortable="FALSE" ID="{64e828ab-fc53-423b-b10f-af7239da0391}" SourceID="{{listid:Tech}}" StaticName="Description" Name="Description" ColName="ntext2" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="Tagline" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{3138c99c-dc47-4196-9f86-d4b168893136}" SourceID="{{listid:Tech}}" StaticName="Tagline" Name="Tagline" ColName="nvarchar7" RowOrdinal="0" />
+            <Field Type="Note" DisplayName="Ratings" Description="Stores a JSON array of ratings, { userId, value }" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" NumLines="6" RichText="FALSE" Sortable="FALSE" ID="{e650e380-9e73-4af8-bce8-87f7cc8b8188}" SourceID="{{listid:Tech}}" StaticName="Ratings" Name="Ratings" ColName="ntext3" RowOrdinal="0" />
           </pnp:Fields>
           <pnp:DataRows UpdateBehavior="Overwrite">
             <pnp:DataRow>
               <pnp:DataValue FieldName="Title">React</pnp:DataValue>
-              <pnp:DataValue FieldName="Link" />
-              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Link">https://reactjs.org/</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://reactjs.org/logo-og.png</pnp:DataValue>
               <pnp:DataValue FieldName="Category">1</pnp:DataValue>
               <pnp:DataValue FieldName="Tags" />
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">A JavaScript library for building user interfaces</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
               <pnp:DataValue FieldName="Order">100</pnp:DataValue>
               <pnp:DataValue FieldName="FileLeafRef">1_.000</pnp:DataValue>
               <pnp:DataValue FieldName="MetaInfo" />
             </pnp:DataRow>
             <pnp:DataRow>
               <pnp:DataValue FieldName="Title">Angular</pnp:DataValue>
-              <pnp:DataValue FieldName="Link" />
-              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Link">https://angular.io/</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://myskyline365.sharepoint.com/:i:/r/sites/TechStacker/SiteAssets/angular2.png?csf=1&amp;e=wAs4ON</pnp:DataValue>
               <pnp:DataValue FieldName="Category">1</pnp:DataValue>
               <pnp:DataValue FieldName="Tags" />
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">One framework. Mobile &amp; desktop.</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
               <pnp:DataValue FieldName="Order">200</pnp:DataValue>
               <pnp:DataValue FieldName="FileLeafRef">2_.000</pnp:DataValue>
               <pnp:DataValue FieldName="MetaInfo" />
             </pnp:DataRow>
             <pnp:DataRow>
               <pnp:DataValue FieldName="Title">Vue</pnp:DataValue>
-              <pnp:DataValue FieldName="Link" />
-              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Link">https://vuejs.org</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://vuejs.org//images/logo.png</pnp:DataValue>
               <pnp:DataValue FieldName="Category">1</pnp:DataValue>
               <pnp:DataValue FieldName="Tags" />
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">The Progressive JavaScript Framework.</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
               <pnp:DataValue FieldName="Order">300</pnp:DataValue>
               <pnp:DataValue FieldName="FileLeafRef">3_.000</pnp:DataValue>
               <pnp:DataValue FieldName="MetaInfo" />
             </pnp:DataRow>
             <pnp:DataRow>
               <pnp:DataValue FieldName="Title">Svelte</pnp:DataValue>
-              <pnp:DataValue FieldName="Link" />
-              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Link">https://svelte.dev/</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://myskyline365.sharepoint.com/:i:/r/sites/TechStacker/SiteAssets/svelte-logo.png?csf=1&amp;e=V9AqzV</pnp:DataValue>
               <pnp:DataValue FieldName="Category">1</pnp:DataValue>
               <pnp:DataValue FieldName="Tags" />
+              <pnp:DataValue FieldName="Description">Svelte is a radical new approach to building user interfaces. Whereas traditional frameworks like React and Vue do the bulk of their work in the browser, Svelte shifts that work into a compile step that happens when you build your app.
+
+Instead of using techniques like virtual DOM diffing, Svelte writes code that surgically updates the DOM when the state of your app changes.</pnp:DataValue>
+              <pnp:DataValue FieldName="Tagline">Cybernetically enhanced web apps</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
               <pnp:DataValue FieldName="Order">400</pnp:DataValue>
               <pnp:DataValue FieldName="FileLeafRef">4_.000</pnp:DataValue>
               <pnp:DataValue FieldName="MetaInfo" />
             </pnp:DataRow>
             <pnp:DataRow>
               <pnp:DataValue FieldName="Title">Ember</pnp:DataValue>
-              <pnp:DataValue FieldName="Link">https://svelte.dev/</pnp:DataValue>
-              <pnp:DataValue FieldName="Logo">https://i2.wp.com/programmingwithmosh.com/wp-content/uploads/2019/12/1_OJLglSTFZ1PbwpRG0U2xXA.png?ssl=1</pnp:DataValue>
+              <pnp:DataValue FieldName="Link">https://emberjs.com/</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://emberjs.com/images/tomster-sm.png</pnp:DataValue>
               <pnp:DataValue FieldName="Category">1</pnp:DataValue>
-              <pnp:DataValue FieldName="Tags" />
+              <pnp:DataValue FieldName="Tags">opinionated</pnp:DataValue>
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">Ember.js is a productive, battle-tested JavaScript framework for building modern web applications. It includes everything you need to build rich UIs that work on any device.</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
               <pnp:DataValue FieldName="Order">500</pnp:DataValue>
               <pnp:DataValue FieldName="FileLeafRef">5_.000</pnp:DataValue>
               <pnp:DataValue FieldName="MetaInfo" />
             </pnp:DataRow>
             <pnp:DataRow>
               <pnp:DataValue FieldName="Title">TypeScript</pnp:DataValue>
-              <pnp:DataValue FieldName="Link" />
-              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Link">https://www.typescriptlang.org/</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://myskyline365.sharepoint.com/:i:/r/sites/TechStacker/SiteAssets/typescriptlang.png?csf=1&amp;e=hZx30c</pnp:DataValue>
               <pnp:DataValue FieldName="Category">3</pnp:DataValue>
               <pnp:DataValue FieldName="Tags" />
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">TypeScript extends JavaScript by adding types to the language.</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
               <pnp:DataValue FieldName="Order">600</pnp:DataValue>
               <pnp:DataValue FieldName="FileLeafRef">6_.000</pnp:DataValue>
               <pnp:DataValue FieldName="MetaInfo" />
             </pnp:DataRow>
             <pnp:DataRow>
-              <pnp:DataValue FieldName="Title">ESNext (Javascript)</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">ESNext</pnp:DataValue>
               <pnp:DataValue FieldName="Link" />
-              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Logo">https://myskyline365.sharepoint.com/:i:/r/sites/TechStacker/SiteAssets/javascriptlang.png?csf=1&amp;e=stcoPr</pnp:DataValue>
               <pnp:DataValue FieldName="Category">3</pnp:DataValue>
               <pnp:DataValue FieldName="Tags" />
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">Use the latest JavaScript syntax and transpile with something like Babel.</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
               <pnp:DataValue FieldName="Order">700</pnp:DataValue>
               <pnp:DataValue FieldName="FileLeafRef">7_.000</pnp:DataValue>
               <pnp:DataValue FieldName="MetaInfo" />
@@ -211,146 +240,510 @@
             <pnp:DataRow>
               <pnp:DataValue FieldName="Title">ES5 (Javascript)</pnp:DataValue>
               <pnp:DataValue FieldName="Link" />
-              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Logo">https://myskyline365.sharepoint.com/:i:/r/sites/TechStacker/SiteAssets/javascriptlang.png?csf=1&amp;e=stcoPr</pnp:DataValue>
               <pnp:DataValue FieldName="Category">3</pnp:DataValue>
-              <pnp:DataValue FieldName="Tags" />
+              <pnp:DataValue FieldName="Tags">minimalist, kickin-it-old-school</pnp:DataValue>
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">Javascript that works in IE. No fancy build steps.</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
               <pnp:DataValue FieldName="Order">800</pnp:DataValue>
               <pnp:DataValue FieldName="FileLeafRef">8_.000</pnp:DataValue>
               <pnp:DataValue FieldName="MetaInfo" />
             </pnp:DataRow>
             <pnp:DataRow>
               <pnp:DataValue FieldName="Title">Flow</pnp:DataValue>
-              <pnp:DataValue FieldName="Link" />
-              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Link">https://flow.org/</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/832/full/flowtype-logo.png</pnp:DataValue>
               <pnp:DataValue FieldName="Category">3</pnp:DataValue>
               <pnp:DataValue FieldName="Tags" />
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">A Static Type Checker for JavaScript</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
               <pnp:DataValue FieldName="Order">900</pnp:DataValue>
               <pnp:DataValue FieldName="FileLeafRef">9_.000</pnp:DataValue>
               <pnp:DataValue FieldName="MetaInfo" />
             </pnp:DataRow>
             <pnp:DataRow>
-              <pnp:DataValue FieldName="Title">ReasonML</pnp:DataValue>
-              <pnp:DataValue FieldName="Link" />
-              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Title">Reason</pnp:DataValue>
+              <pnp:DataValue FieldName="Link">https://reasonml.github.io/</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://miro.medium.com/max/400/1*rFOtAIWjbeAyNNFcW029bQ.png</pnp:DataValue>
               <pnp:DataValue FieldName="Category">3</pnp:DataValue>
               <pnp:DataValue FieldName="Tags" />
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">Reason lets you write simple, fast and quality type safe code while leveraging both the JavaScript &amp; OCaml ecosystems.</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
               <pnp:DataValue FieldName="Order">1000</pnp:DataValue>
               <pnp:DataValue FieldName="FileLeafRef">10_.000</pnp:DataValue>
               <pnp:DataValue FieldName="MetaInfo" />
             </pnp:DataRow>
             <pnp:DataRow>
               <pnp:DataValue FieldName="Title">Elm</pnp:DataValue>
-              <pnp:DataValue FieldName="Link" />
+              <pnp:DataValue FieldName="Link">https://elm-lang.org/</pnp:DataValue>
               <pnp:DataValue FieldName="Logo" />
               <pnp:DataValue FieldName="Category">3</pnp:DataValue>
               <pnp:DataValue FieldName="Tags" />
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">A delightful language for reliable webapps.</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
               <pnp:DataValue FieldName="Order">1100</pnp:DataValue>
               <pnp:DataValue FieldName="FileLeafRef">11_.000</pnp:DataValue>
               <pnp:DataValue FieldName="MetaInfo" />
             </pnp:DataRow>
             <pnp:DataRow>
-              <pnp:DataValue FieldName="Title">CoffeeScript</pnp:DataValue>
-              <pnp:DataValue FieldName="Link" />
-              <pnp:DataValue FieldName="Logo" />
-              <pnp:DataValue FieldName="Category">3</pnp:DataValue>
-              <pnp:DataValue FieldName="Tags" />
-              <pnp:DataValue FieldName="Order">1200</pnp:DataValue>
-              <pnp:DataValue FieldName="FileLeafRef">12_.000</pnp:DataValue>
-              <pnp:DataValue FieldName="MetaInfo" />
-            </pnp:DataRow>
-            <pnp:DataRow>
               <pnp:DataValue FieldName="Title">Parcel</pnp:DataValue>
-              <pnp:DataValue FieldName="Link" />
-              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Link">https://parceljs.org/</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://miro.medium.com/max/400/0*sTbgxMusvyK1nn9u.png</pnp:DataValue>
               <pnp:DataValue FieldName="Category">8</pnp:DataValue>
               <pnp:DataValue FieldName="Tags">bundler</pnp:DataValue>
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">Bundle all your assets. Parcel has out of the box support for JS, CSS, HTML, file assets, and more - no plugins needed.</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
               <pnp:DataValue FieldName="Order">1300</pnp:DataValue>
               <pnp:DataValue FieldName="FileLeafRef">13_.000</pnp:DataValue>
               <pnp:DataValue FieldName="MetaInfo" />
             </pnp:DataRow>
             <pnp:DataRow>
               <pnp:DataValue FieldName="Title">Webpack</pnp:DataValue>
-              <pnp:DataValue FieldName="Link" />
-              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Link">https://webpack.js.org/</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://raw.githubusercontent.com/webpack/media/master/logo/icon-square-big.png</pnp:DataValue>
               <pnp:DataValue FieldName="Category">8</pnp:DataValue>
               <pnp:DataValue FieldName="Tags">bundler</pnp:DataValue>
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">webpack is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging just about any resource or asset.</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
               <pnp:DataValue FieldName="Order">1400</pnp:DataValue>
               <pnp:DataValue FieldName="FileLeafRef">14_.000</pnp:DataValue>
               <pnp:DataValue FieldName="MetaInfo" />
             </pnp:DataRow>
             <pnp:DataRow>
               <pnp:DataValue FieldName="Title">Rollup</pnp:DataValue>
-              <pnp:DataValue FieldName="Link" />
-              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Link">https://rollupjs.org/guide/en/</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://avatars2.githubusercontent.com/u/12554859?s=400&amp;v=4</pnp:DataValue>
               <pnp:DataValue FieldName="Category">8</pnp:DataValue>
               <pnp:DataValue FieldName="Tags">bundler</pnp:DataValue>
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">Rollup is a module bundler for JavaScript which compiles small pieces of code into something larger and more complex, such as a library or application.</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
               <pnp:DataValue FieldName="Order">1500</pnp:DataValue>
               <pnp:DataValue FieldName="FileLeafRef">15_.000</pnp:DataValue>
               <pnp:DataValue FieldName="MetaInfo" />
             </pnp:DataRow>
             <pnp:DataRow>
               <pnp:DataValue FieldName="Title">Babel</pnp:DataValue>
-              <pnp:DataValue FieldName="Link" />
-              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Link">https://babeljs.io/</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://ih1.redbubble.net/image.370345724.1971/flat,750x,075,f-pad,750x1000,f8f8f8.jpg</pnp:DataValue>
               <pnp:DataValue FieldName="Category">8</pnp:DataValue>
               <pnp:DataValue FieldName="Tags">compiler</pnp:DataValue>
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">Babel is a JavaScript compiler. Use next generation JavaScript, today.</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
               <pnp:DataValue FieldName="Order">1600</pnp:DataValue>
               <pnp:DataValue FieldName="FileLeafRef">16_.000</pnp:DataValue>
               <pnp:DataValue FieldName="MetaInfo" />
             </pnp:DataRow>
             <pnp:DataRow>
               <pnp:DataValue FieldName="Title">Styled Components</pnp:DataValue>
-              <pnp:DataValue FieldName="Link" />
-              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Link">https://styled-components.com/</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://www.styled-components.com/atom.png</pnp:DataValue>
               <pnp:DataValue FieldName="Category">5</pnp:DataValue>
               <pnp:DataValue FieldName="Tags">css-in-js, styling</pnp:DataValue>
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">Visual primitives for the component age. Use the best bits of ES6 and CSS to style your apps without stress.</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
               <pnp:DataValue FieldName="Order">1700</pnp:DataValue>
               <pnp:DataValue FieldName="FileLeafRef">17_.000</pnp:DataValue>
               <pnp:DataValue FieldName="MetaInfo" />
             </pnp:DataRow>
             <pnp:DataRow>
               <pnp:DataValue FieldName="Title">Bootstrap</pnp:DataValue>
-              <pnp:DataValue FieldName="Link" />
-              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Link">https://getbootstrap.com/</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://getbootstrap.com/docs/4.4/assets/brand/bootstrap-social.png</pnp:DataValue>
               <pnp:DataValue FieldName="Category">5</pnp:DataValue>
               <pnp:DataValue FieldName="Tags">css-framework, component-library</pnp:DataValue>
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">The most popular HTML, CSS, and JS library in the world.</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
               <pnp:DataValue FieldName="Order">1800</pnp:DataValue>
               <pnp:DataValue FieldName="FileLeafRef">18_.000</pnp:DataValue>
               <pnp:DataValue FieldName="MetaInfo" />
             </pnp:DataRow>
             <pnp:DataRow>
-              <pnp:DataValue FieldName="Title">Microsoft Fluent UI</pnp:DataValue>
-              <pnp:DataValue FieldName="Link" />
-              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Title">Microsoft Office UI Fabric</pnp:DataValue>
+              <pnp:DataValue FieldName="Link">https://developer.microsoft.com/en-us/fabric#/controls/web</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://temperfield.com/wp-content/uploads/2017/09/Microsoft-Logo-icon-png-Transparent-Background.png</pnp:DataValue>
               <pnp:DataValue FieldName="Category">5</pnp:DataValue>
               <pnp:DataValue FieldName="Tags">component-library, design-system</pnp:DataValue>
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">Design and build great-looking web apps and add-ins that feel like natural extensions to Microsoft products.</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
               <pnp:DataValue FieldName="Order">1900</pnp:DataValue>
               <pnp:DataValue FieldName="FileLeafRef">19_.000</pnp:DataValue>
               <pnp:DataValue FieldName="MetaInfo" />
             </pnp:DataRow>
             <pnp:DataRow>
-              <pnp:DataValue FieldName="Title">New thing</pnp:DataValue>
-              <pnp:DataValue FieldName="Link" />
-              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Title">Gatsby</pnp:DataValue>
+              <pnp:DataValue FieldName="Link">https://www.gatsbyjs.org</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://www.gatsbyjs.org/static/gatsby-icon-4a9773549091c227cd2eb82ccd9c5e3a.png</pnp:DataValue>
               <pnp:DataValue FieldName="Category">1</pnp:DataValue>
-              <pnp:DataValue FieldName="Tags" />
-              <pnp:DataValue FieldName="Order">2000</pnp:DataValue>
-              <pnp:DataValue FieldName="FileLeafRef">20_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags">static-site, react</pnp:DataValue>
+              <pnp:DataValue FieldName="Description">**Pros**
+
+- Really Fast!
+- Works well on lower end devices
+- Awesome plugins
+
+**Cons**
+
+- Not great for often changing content (you need to rebuild each time content changes)
+- Not great for targeted content. If the content is different per user then something like Gatsby falls apart
+</pnp:DataValue>
+              <pnp:DataValue FieldName="Tagline">Gatsby is a free and open source framework based on React that helps developers build blazing fast websites and apps</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
+              <pnp:DataValue FieldName="Order">2200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">22_.000</pnp:DataValue>
               <pnp:DataValue FieldName="MetaInfo" />
             </pnp:DataRow>
             <pnp:DataRow>
-              <pnp:DataValue FieldName="Title">New thing 2</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">Next.js</pnp:DataValue>
+              <pnp:DataValue FieldName="Link">https://nextjs.org/</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://cdn.auth0.com/blog/logos/nextjs-logo.png</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">1</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags">static-site, fullstack</pnp:DataValue>
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">Production grade React applications that scale. The world's leading companies use Next.js to build static and dynamic websites and web applications.</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
+              <pnp:DataValue FieldName="Order">2300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">23_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">NPM Scripts</pnp:DataValue>
+              <pnp:DataValue FieldName="Link">https://deliciousbrains.com/npm-build-script/</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://myskyline365.sharepoint.com/:i:/r/sites/TechStacker/SiteAssets/npm-script.png?csf=1&amp;e=ipWEkl</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">8</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags">task-runner, minimalist</pnp:DataValue>
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">npm run blah</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
+              <pnp:DataValue FieldName="Order">2400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">24_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Sass</pnp:DataValue>
+              <pnp:DataValue FieldName="Link">https://sass-lang.com/</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://myskyline365.sharepoint.com/:i:/r/sites/TechStacker/SiteAssets/scsslogo.png?csf=1&amp;e=eTdjIs</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">5</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags">styling</pnp:DataValue>
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">CSS with superpowers.</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
+              <pnp:DataValue FieldName="Order">2600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">26_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">CSS (vanilla)</pnp:DataValue>
               <pnp:DataValue FieldName="Link" />
-              <pnp:DataValue FieldName="Logo" />
+              <pnp:DataValue FieldName="Logo">https://myskyline365.sharepoint.com/:i:/r/sites/TechStacker/SiteAssets/csslang.png?csf=1&amp;e=QyDSv7</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">5</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags">styling, minimalist</pnp:DataValue>
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">Why complicate things. Just write some CSS.</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
+              <pnp:DataValue FieldName="Order">2700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">27_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">VS Code</pnp:DataValue>
+              <pnp:DataValue FieldName="Link">https://code.visualstudio.com/</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://myskyline365.sharepoint.com/:i:/r/sites/TechStacker/SiteAssets/vscode-logo.png?csf=1&amp;e=Cx5Qz6</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">8</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags">editor</pnp:DataValue>
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">Code Editing. Redefined.</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
+              <pnp:DataValue FieldName="Order">2800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">28_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Redux</pnp:DataValue>
+              <pnp:DataValue FieldName="Link">https://redux.js.org/</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://myskyline365.sharepoint.com/:i:/r/sites/TechStacker/SiteAssets/redux.png?csf=1&amp;e=z70gQf</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">7</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags">react</pnp:DataValue>
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">A predictable state container for JavaScript apps.</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
+              <pnp:DataValue FieldName="Order">3000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">30_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">arqex/freezer</pnp:DataValue>
+              <pnp:DataValue FieldName="Link">https://github.com/arqex/freezer</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://avatars3.githubusercontent.com/u/6509397?s=400&amp;amp;v=4</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">12</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags">immutable</pnp:DataValue>
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">A tree data structure that emits events on updates, even if the modification is triggered by one of the leaves, making it easier to think in a reactive way. - arqex/freezer</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
+              <pnp:DataValue FieldName="Order">3100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">31_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">date-fns</pnp:DataValue>
+              <pnp:DataValue FieldName="Link">https://date-fns.org/</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">http://cdn.date-fns.org/card.png</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">12</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags">dates</pnp:DataValue>
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">date-fns provides the most comprehensive yet simple and consistent toolset for manipulating JavaScript dates in a browser &amp; Node.js.</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
+              <pnp:DataValue FieldName="Order">4000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">40_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">MobX</pnp:DataValue>
+              <pnp:DataValue FieldName="Link">https://mobx.js.org/README.html</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://mobx.js.org/assets/mobx.png</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">7</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags">state-management</pnp:DataValue>
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">Simple, scalable state management</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
+              <pnp:DataValue FieldName="Order">4100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">41_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">React Context</pnp:DataValue>
+              <pnp:DataValue FieldName="Link">https://reactjs.org/docs/hooks-reference.html#usecontext</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://reactjs.org/logo-og.png</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">7</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags">react, diy, state-management</pnp:DataValue>
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">React Context + Hooks = A very nice story for application state</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
+              <pnp:DataValue FieldName="Order">4200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">42_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Apollo Client</pnp:DataValue>
+              <pnp:DataValue FieldName="Link">https://www.apollographql.com/docs/react/</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://d2eip9sf3oo6c2.cloudfront.net/series/square_covers/000/000/231/full/EGH_Apollo-GraphQL-React_Final.png</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">7</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags">graphql, react, state-management</pnp:DataValue>
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">Apollo Client is a complete state management library for JavaScript apps. Simply write a GraphQL query, and Apollo Client will take care of requesting and caching your data, as well as updating your UI.</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
+              <pnp:DataValue FieldName="Order">4300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">43_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Prettier</pnp:DataValue>
+              <pnp:DataValue FieldName="Link">https://prettier.io/</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://prettier.io/icon.png</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">8</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags" />
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">Opinionated Code Formatter</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
+              <pnp:DataValue FieldName="Order">4400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">44_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">gulp.js</pnp:DataValue>
+              <pnp:DataValue FieldName="Link">https://gulpjs.com/</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://cdn.auth0.com/blog/gulpjs/logo.png</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">8</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags">task-runner</pnp:DataValue>
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">The streaming build system. Using the power of node streams, gulp gives you fast builds that don't write intermediary files to disk.</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
+              <pnp:DataValue FieldName="Order">4500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">45_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Grunt</pnp:DataValue>
+              <pnp:DataValue FieldName="Link">https://gruntjs.com/</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://gruntjs.com/img/og.png</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">8</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags">task-runner</pnp:DataValue>
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">The JavaScript Task Runner</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
+              <pnp:DataValue FieldName="Order">4600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">46_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">React Router</pnp:DataValue>
+              <pnp:DataValue FieldName="Link">https://reacttraining.com/react-router/</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://reacttraining.com/react-router/react-square.png</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">12</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags">react, router</pnp:DataValue>
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">Learn Once, Route Anywhere. Declarative Routing for React</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
+              <pnp:DataValue FieldName="Order">4700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">47_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Material-UI</pnp:DataValue>
+              <pnp:DataValue FieldName="Link">https://material-ui.com/</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://material-ui.com/static/logo.png</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">5</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags">design-system, component-library, react</pnp:DataValue>
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">React components for faster and easier web development. Build your own design system, or start with Material Design.</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
+              <pnp:DataValue FieldName="Order">4800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">48_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Tailwind</pnp:DataValue>
+              <pnp:DataValue FieldName="Link">https://tailwindcss.com/</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://pbs.twimg.com/profile_images/895274026783866881/E1G1nNb0.jpg</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">5</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags">styling, css-framework</pnp:DataValue>
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">A utility-first CSS framework for rapidly building custom designs.</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
+              <pnp:DataValue FieldName="Order">4900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">49_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Moment.js</pnp:DataValue>
+              <pnp:DataValue FieldName="Link">https://momentjs.com/</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://avatars2.githubusercontent.com/u/4129662?s=400&amp;v=4</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">12</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags">dates</pnp:DataValue>
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">Parse, validate, manipulate, and display dates in javascript.</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
+              <pnp:DataValue FieldName="Order">5000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">50_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Jest</pnp:DataValue>
+              <pnp:DataValue FieldName="Link">https://jestjs.io/</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://jestjs.io/img/opengraph.png</pnp:DataValue>
               <pnp:DataValue FieldName="Category">13</pnp:DataValue>
-              <pnp:DataValue FieldName="Tags">unit-testing</pnp:DataValue>
-              <pnp:DataValue FieldName="Order">2100</pnp:DataValue>
-              <pnp:DataValue FieldName="FileLeafRef">21_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags" />
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">🃏 Delightful JavaScript Testing Framework with a focus on simplicity.</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
+              <pnp:DataValue FieldName="Order">5100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">51_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Mocha</pnp:DataValue>
+              <pnp:DataValue FieldName="Link">https://mochajs.org/</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://avatars2.githubusercontent.com/u/8770005?s=400&amp;v=4</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">13</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags" />
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">The fun, simple, flexible JavaScript test framework</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
+              <pnp:DataValue FieldName="Order">5200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">52_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">React Testing Library</pnp:DataValue>
+              <pnp:DataValue FieldName="Link">https://testing-library.com/docs/react-testing-library/intro</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://testing-library.com/img/octopus-128x128.png</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">13</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags">react</pnp:DataValue>
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">React Testing Library builds on top of DOM Testing Library by adding APIs for working with React components.</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
+              <pnp:DataValue FieldName="Order">5300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">53_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">ESLint</pnp:DataValue>
+              <pnp:DataValue FieldName="Link">https://eslint.org/</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://eslint.org/assets/img/favicon.512x512.png</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">8</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags" />
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">A pluggable and configurable linter tool for identifying and reporting on patterns in JavaScript. Maintain your code quality with ease.</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
+              <pnp:DataValue FieldName="Order">5400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">54_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Cypress</pnp:DataValue>
+              <pnp:DataValue FieldName="Link">https://www.cypress.io/</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://img.stackshare.io/service/9231/pXI1GDHW_400x400.jpg</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">13</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags" />
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">JavaScript End to End Testing Framework. Fast, easy and reliable testing for anything that runs in a browser.</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
+              <pnp:DataValue FieldName="Order">5500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">55_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Immer</pnp:DataValue>
+              <pnp:DataValue FieldName="Link">https://immerjs.github.io/immer/docs/introduction</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://avatars2.githubusercontent.com/u/45853199?s=400&amp;v=4</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">12</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags">immutable</pnp:DataValue>
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">A tiny package that allows you to work with immutable state in a more convenient way. </pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
+              <pnp:DataValue FieldName="Order">5600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">56_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">jQuery</pnp:DataValue>
+              <pnp:DataValue FieldName="Link">https://jquery.com/</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://openjsf.org/wp-content/uploads/sites/84/2019/10/jquery-logo-vertical_large_square.png</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">12</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags">kickin-it-old-school</pnp:DataValue>
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">jQuery: The Write Less, Do More, JavaScript Library</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
+              <pnp:DataValue FieldName="Order">5700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">57_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Lodash</pnp:DataValue>
+              <pnp:DataValue FieldName="Link">https://lodash.com/</pnp:DataValue>
+              <pnp:DataValue FieldName="Logo">https://upload.wikimedia.org/wikipedia/en/6/6f/Lodash.svg</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">12</pnp:DataValue>
+              <pnp:DataValue FieldName="Tags" />
+              <pnp:DataValue FieldName="Description" />
+              <pnp:DataValue FieldName="Tagline">A JavaScript utility library delivering consistency, modularity, performance, &amp; extras.</pnp:DataValue>
+              <pnp:DataValue FieldName="Ratings" />
+              <pnp:DataValue FieldName="Order">5800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">58_.000</pnp:DataValue>
               <pnp:DataValue FieldName="MetaInfo" />
             </pnp:DataRow>
           </pnp:DataRows>
           <pnp:Webhooks>
-            <pnp:Webhook ServerNotificationUrl="https://3-southcentralus1.pushp.svc.ms/notifications?token=w3-39656ad9-d1c6-41c7-9702-2aa160fcda1e" ExpiresInDays="1" />
+            <pnp:Webhook ServerNotificationUrl="https://9-southcentralus1.pushp.svc.ms/notifications?token=w0-9ba205ad-28aa-41cd-8f57-da00fbccce1f" ExpiresInDays="1" />
           </pnp:Webhooks>
         </pnp:ListInstance>
       </pnp:Lists>
