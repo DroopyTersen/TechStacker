@@ -67,6 +67,7 @@ declare global {
     __portalsDev: {
       siteUrl: string;
       webUrl: string;
+      currentUser: any;
     };
   }
 }

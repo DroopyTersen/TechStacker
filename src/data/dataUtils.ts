@@ -1,4 +1,4 @@
-import { Tag, Tech } from "./interfaces";
+import { Tag, Tech, Rating } from "./interfaces";
 
 export const parseTagsString = (str): Tag[] => {
   return str
@@ -32,4 +32,32 @@ export const filterTech = (technologies: Tech[], filter = "") => {
         .includes(filter)
     );
   });
+};
+
+export const updateRatingsString = (ratingsStr: string, { value, userId }) => {
+  try {
+    let ratings: Rating[] = parseRatingsString(ratingsStr);
+    return JSON.stringify([...ratings.filter((r) => r.userId !== userId), { value, userId }]);
+  } catch (err) {
+    console.log("Unable to add rating to JSON string", err);
+    return ratingsStr;
+  }
+};
+
+export const parseRatingsString = (ratingsStr: string): Rating[] => {
+  if (!ratingsStr) return [];
+  try {
+    let ratings = JSON.parse(ratingsStr);
+    return ratings || [];
+  } catch (err) {
+    return [];
+  }
+};
+
+export const calcRatingsAvg = (ratingsStr: string): number => {
+  let ratings: Rating[] = parseRatingsString(ratingsStr);
+  if (ratings.length < 1) return 0;
+  let scores = ratings.map((r) => r.value).filter((value) => value > 0);
+  let total = scores.reduce((sum, score) => sum + score, 0);
+  return Math.round((total / scores.length) * 10) / 10;
 };

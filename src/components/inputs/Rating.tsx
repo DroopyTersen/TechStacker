@@ -10,12 +10,12 @@ interface EmojiRating {
 const ratings: EmojiRating[] = [
   {
     emoji: "🤷‍♂️",
-    label: "Not sure, I haven't used it enough",
+    label: "Idk, I haven't used it enough",
     value: 0,
   },
   {
     emoji: "🤮",
-    label: "Yuck! I wouldn't recommend it",
+    label: "Yuck!",
     value: 1,
   },
   {

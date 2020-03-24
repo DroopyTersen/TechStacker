@@ -23,3 +23,10 @@ export default function useDebounce(value, delay) {
 // useEffect(() => {
 //     props.onChange(updatedTitle);
 // }, [updatedTitle])
+
+export function useDebouncedEffect(value, delay, effect) {
+  let updatedValue = useDebounce(value, delay);
+  useEffect(() => {
+    effect(updatedValue);
+  }, [updatedValue]);
+}

@@ -22,10 +22,20 @@ export interface Tech {
   CategoryId: number;
   Tags: string;
   tags: Tag[];
+  Ratings: string;
+  ratings: Rating[];
+  averageRating: number;
+  currentUserRating?: number;
   category: Category;
   slug: string;
   createdBy: User;
   modifiedBy: User;
+}
+
+export interface Rating {
+  value: number;
+  userId: number;
+  user?: User;
 }
 
 export interface AppData {

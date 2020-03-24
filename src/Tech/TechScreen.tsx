@@ -193,6 +193,11 @@ const QUERY = gql`
         Link
         Tagline
         slug
+        currentUserRating
+        averageRating
+        ratings {
+          value
+        }
         tags {
           title
         }

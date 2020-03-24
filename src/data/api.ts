@@ -37,7 +37,6 @@ export let saveTech = async function(tech: Tech) {
     item = await list.getItemById(tech.Id);
   }
   data.technologies = await getTech(ctx);
-  console.log("UPDATED DATA.technologies", data.technologies);
   return transformTechItem(item);
 };
 
@@ -45,7 +44,7 @@ let getTech = async function(ctx: Context) {
   let odata = {
     $top: 5000,
     $select:
-      "Title,Link,Logo,Id,CategoryId,Description,Tagline,Tags,Created,Modified,EditorId,AuthorId",
+      "Title,Link,Logo,Id,CategoryId,Description,Ratings,Tagline,Tags,Created,Modified,EditorId,AuthorId",
     $orderby: "Title",
   };
   let items: any[] = await ctx.lists("Tech").getItems(SPScript.utils.qs.fromObj(odata));

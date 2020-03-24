@@ -7,9 +7,11 @@ export default gql`
     tech(id: Int!): Tech
     users: [User]
     tags: [Tag]
+    currentUser: User
   }
   type Mutation {
     saveTech(tech: SaveTechInput): Tech
+    rateTech(rating: RatingInput): Tech
   }
   type Category {
     Id: ID!
@@ -46,7 +48,11 @@ export default gql`
     modifiedBy: User
     slug: String
     tags: [Tag]
+    ratings: [Rating]
+    averageRating: Float
+    currentUserRating: Int
   }
+
   input SaveTechInput {
     Id: Int
     Title: String!
@@ -58,6 +64,16 @@ export default gql`
     Description: String
   }
 
+  type Rating {
+    value: Int
+    userId: Int
+    user: User
+  }
+
+  input RatingInput {
+    techId: Int
+    value: Int
+  }
   type User {
     id: ID!
     email: String

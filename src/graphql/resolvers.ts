@@ -1,7 +1,8 @@
 import { data, getData, saveTech } from "../data/api";
-import { Category, Tech, Tag } from "../data/interfaces";
+import { Category, Tech, Tag, User, Rating } from "../data/interfaces";
 import { uniqBy, flatten, sortBy } from "@microsoft/sp-lodash-subset";
 import slugify from "slugify";
+import { updateRatingsString, parseRatingsString, calcRatingsAvg } from "../data/dataUtils";
 
 let waitForData = getData();
 
@@ -29,6 +30,9 @@ const resolvers = {
     tech: async (root, { id }) => {
       await waitForData;
       return data.technologies.find((t) => t.Id === id);
+    },
+    currentUser: () => {
+      return data.users.find((u) => u.email === window.__portalsDev.currentUser.email);
     },
   },
   Category: {
@@ -69,6 +73,23 @@ const resolvers = {
       let category = data.categories.find((c) => c.Id === tech.CategoryId);
       return category.Icon;
     },
+    ratings: (tech: Tech) => {
+      return parseRatingsString(tech.Ratings);
+    },
+    currentUserRating: (tech: Tech) => {
+      let ratings = parseRatingsString(tech.Ratings);
+      let currentUser = data.users.find((u) => u.email === window.__portalsDev.currentUser.email);
+      let rating = ratings.find((r) => r.userId === currentUser.id);
+      return rating ? rating.value : null;
+    },
+    averageRating: (tech: Tech) => {
+      return calcRatingsAvg(tech.Ratings);
+    },
+  },
+  Rating: {
+    user: (rating: Rating) => {
+      return data.users.find((u) => u.id === rating.userId);
+    },
   },
   Tag: {
     technologies: async (tag: Tag) => {
@@ -80,6 +101,15 @@ const resolvers = {
     saveTech: async (parent, { tech }) => {
       let newTech = await saveTech(tech);
       return newTech;
+    },
+    rateTech: async (parent, { rating: { techId, value } }) => {
+      let tech = data.technologies.find((t) => t.Id === techId);
+      let currentUser = data.users.find((u) => u.email === window.__portalsDev.currentUser.email);
+      if (tech) {
+        tech.Ratings = updateRatingsString(tech.Ratings, { value, userId: currentUser.id });
+        await saveTech({ Id: tech.Id, Ratings: tech.Ratings } as any);
+      }
+      return tech;
     },
   },
 };
