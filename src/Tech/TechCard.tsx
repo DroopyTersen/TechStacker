@@ -13,6 +13,7 @@ import { useMutation } from "react-apollo";
 import useDebounce, { useDebouncedEffect } from "../ui-toolkit/hooks/useDebounce";
 
 function TechCard({ tech }: TechCardProps) {
+  console.log("TechCard -> tech", tech.Title);
   let [rateTech] = useMutation(MUTATION);
 
   let tags = tech.tags.map((t) => ({ label: t.title }));
@@ -100,6 +101,7 @@ const MUTATION = gql`
   mutation RateTech($rating: RatingInput) {
     rateTech(rating: $rating) {
       Id
+      averageRating
     }
   }
 `;

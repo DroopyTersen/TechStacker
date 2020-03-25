@@ -12,12 +12,12 @@ const resolvers = {
   Query: {
     categories: async (root, args, context, info) => {
       await waitForData;
-      console.log("resolvers Query.categories", data.technologies);
+      //   console.log("resolvers Query.categories", data.technologies);
       return data.categories;
     },
     technologies: async (root, args, context, info) => {
       await waitForData;
-      console.log("resolvers Query.technologies", data.technologies);
+      //   console.log("resolvers Query.technologies", data.technologies);
 
       return data.technologies;
     },
@@ -117,8 +117,8 @@ const resolvers = {
       let tech = data.technologies.find((t) => t.Id === techId);
       let currentUser = data.users.find((u) => u.email === window.__portalsDev.currentUser.email);
       if (tech) {
-        tech.Ratings = updateRatingsString(tech.Ratings, { value, userId: currentUser.id });
-        await saveTech({ Id: tech.Id, Ratings: tech.Ratings } as any);
+        let ratingsStr = updateRatingsString(tech.Ratings, { value, userId: currentUser.id });
+        await saveTech({ Id: tech.Id, Ratings: ratingsStr } as any);
       }
       return tech;
     },

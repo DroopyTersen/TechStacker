@@ -9,6 +9,7 @@ import { useTechFilter } from "./TechFilterContext";
 import { filterTech } from "../data/dataUtils";
 
 function TechCategory({ category }: TechCategoryProps) {
+  console.log("TechCategory -> TechCategory", category.Title);
   let { filter } = useTechFilter();
   let technologies = filterTech(category.technologies, filter);
   if (!technologies.length) return null;
@@ -24,7 +25,7 @@ function TechCategory({ category }: TechCategoryProps) {
       {!!technologies.length && (
         <Grid size={"350px"}>
           {technologies.map((tech) => (
-            <TechCard tech={tech} />
+            <TechCard key={tech.Id} tech={tech} />
           ))}
         </Grid>
       )}
