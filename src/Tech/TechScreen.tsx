@@ -14,6 +14,7 @@ import { useRouter } from "../appShell/router/Router";
 export default function TechScreen({ path = "" }) {
   let { data, error, loading } = useQuery<{ categories: Category[] }>(QUERY, {
     fetchPolicy: "network-only",
+    pollInterval: 1500,
   });
   if (loading) return null;
   if (error) return <Error error={error} />;
