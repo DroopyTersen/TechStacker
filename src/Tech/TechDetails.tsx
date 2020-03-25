@@ -8,9 +8,11 @@ import BackgroundImage from "../ui-toolkit/components/primitives/BackgroundImage
 import styled from "styled-components";
 import ReactMarkdown from "react-markdown";
 import Link from "../ui-toolkit/components/primitives/Link";
-import { IconButton } from "office-ui-fabric-react/lib/Button";
+import { IconButton, PrimaryButton, Button } from "office-ui-fabric-react/lib/Button";
 import { useRouter } from "../appShell/router/Router";
 import { useApolloQuery } from "../graphql/ApolloSetup";
+import Grid from "../ui-toolkit/components/Grid/Grid";
+
 function TechDetails({ techId = 0, onEdit }) {
   let { navigate } = useRouter();
   let { data, error, loading } = useApolloQuery<{ tech: Tech }>(QUERY, {
@@ -33,20 +35,32 @@ function TechDetails({ techId = 0, onEdit }) {
           <Link href={tech.Link} title={tech.Link}>
             <h1>{tech.Title}</h1>
           </Link>
-          <IconButton
+          {/* <IconButton
             iconProps={{ iconName: "Edit" }}
             onClick={() => (onEdit ? onEdit(techId) : navigate("/tech/edit", { techId }))}
             title="Edit"
-          />
+          /> */}
         </div>
 
         <div className="flex-row" style={{ justifyContent: "flex-end" }}>
-          <Persona
+          {/* <BackgroundImage
+            src={tech.category.Icon}
+            title={tech.category.Title}
+            style={{ width: "40px", height: "40px" }}
+          /> */}
+          <Button
+            iconProps={{ iconName: "Edit" }}
+            onClick={() => (onEdit ? onEdit(techId) : navigate("/tech/edit", { techId }))}
+            title="Edit"
+          >
+            Edit
+          </Button>
+          {/* <Persona
             photoSize="35px"
             photo={tech.modifiedBy.photo}
             title={tech.modifiedBy.name}
-            subTitle={new Date(tech.Modified).toLocaleDateString()}
-          />
+            subTitle={new Date(tech.Created).toLocaleDateString()}
+          /> */}
         </div>
       </div>
       {tech.Link && (
@@ -56,11 +70,26 @@ function TechDetails({ techId = 0, onEdit }) {
           </Link>
         </div>
       )}
+      <Tags tags={[{ label: tech.category.slug }, ...tech.tags.map((t) => ({ label: t.title }))]} />
       <p>{tech.Tagline}</p>
-      <Tags tags={tech.tags.map((t) => ({ label: t.title }))} />
+
+      <h3>Description</h3>
       <div>
         <ReactMarkdown source={tech.Description} />
       </div>
+      <h3>Skyline Opinions</h3>
+      <Grid size={"200px"}>
+        {tech.ratings
+          .filter((r) => r.value > 0)
+          .map((rating) => (
+            <Persona
+              photoSize={"40px"}
+              title={rating.label}
+              subTitle={rating.user.name}
+              photo={rating.user.photo}
+            />
+          ))}
+      </Grid>
     </StyledDetails>
   );
 }
@@ -85,11 +114,25 @@ const QUERY = gql`
       Logo
       Created
       Modified
+      category {
+        Title
+        slug
+        Icon
+      }
       modifiedBy {
         id
         name
         email
         photo
+      }
+      ratings {
+        user {
+          name
+          id
+          photo
+        }
+        value
+        label
       }
       tags {
         title

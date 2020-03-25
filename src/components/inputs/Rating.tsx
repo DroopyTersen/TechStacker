@@ -7,7 +7,7 @@ interface EmojiRating {
   value: number;
 }
 
-const ratings: EmojiRating[] = [
+export const ratingOptions: EmojiRating[] = [
   {
     emoji: "🤷‍♂️",
     label: "Idk, I haven't used it enough",
@@ -46,13 +46,13 @@ export default function Rating({ value, onChange }) {
   };
   let label = "Rate your experience";
   if (value > -1 && value <= 5) {
-    let match = ratings.find((r) => r.value === value);
+    let match = ratingOptions.find((r) => r.value === value);
     if (match) label = match.label;
   }
   return (
     <StyledRating>
       <div className="buttons">
-        {ratings.map((rating) => (
+        {ratingOptions.map((rating) => (
           <EmojiButton
             className={value === rating.value ? "selected" : ""}
             onClick={() => handleRating(rating)}

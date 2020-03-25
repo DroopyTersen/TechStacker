@@ -55,26 +55,15 @@ let getTech = async function(ctx: Context) {
 };
 
 let getUsers = async function(ctx: Context) {
-  let odata = {
-    $top: 5000,
-    $select: "Title,EMail,Picture,Department,JobTitle,Office,Id",
-  };
-
-  let items: any[] = await ctx
-    .lists("User Information List")
-    .getItems(SPScript.utils.qs.fromObj(odata));
+  let items = await ctx.get("/web/siteUsers?$top=5000").then(SPScript.utils.parseOData);
 
   let users = items
-    .filter((item) => item.EMail)
+    .filter((item) => item.Email)
     .map((item) => {
       return {
         id: item.Id,
         name: item.Title,
-        email: item.EMail,
-        photo: item.Picture && item.Picture.Url ? item.Picture.Url : "",
-        department: item.Department,
-        jobTitle: item.JobTitle,
-        office: item.Office,
+        email: item.Email,
       };
     });
   return users;

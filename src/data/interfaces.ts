@@ -36,6 +36,8 @@ export interface Rating {
   value: number;
   userId: number;
   user?: User;
+  label?: string;
+  emoji?: string;
 }
 
 export interface AppData {
@@ -53,8 +55,5 @@ export interface User {
   id: number;
   name: string;
   email: string;
-  photo: string;
-  department: string;
-  jobTitle: string;
-  office: string;
+  photo?: string;
 }

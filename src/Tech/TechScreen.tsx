@@ -201,6 +201,7 @@ const QUERY = gql`
         tags {
           title
         }
+
         category {
           Title
           Icon

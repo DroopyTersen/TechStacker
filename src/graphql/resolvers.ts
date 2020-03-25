@@ -3,6 +3,8 @@ import { Category, Tech, Tag, User, Rating } from "../data/interfaces";
 import { uniqBy, flatten, sortBy } from "@microsoft/sp-lodash-subset";
 import slugify from "slugify";
 import { updateRatingsString, parseRatingsString, calcRatingsAvg } from "../data/dataUtils";
+import { getSiteUrl } from "../ui-toolkit/core/utils/sharepointUtils";
+import { ratingOptions } from "../components/inputs/Rating";
 
 let waitForData = getData();
 
@@ -90,11 +92,20 @@ const resolvers = {
     user: (rating: Rating) => {
       return data.users.find((u) => u.id === rating.userId);
     },
+    label: (rating: Rating) => {
+      let match = ratingOptions.find((r) => r.value === rating.value);
+      if (match) return match.label;
+    },
   },
   Tag: {
     technologies: async (tag: Tag) => {
       await waitForData;
       return data.technologies.filter((tech) => !!tech.tags.find((t) => t.title === tag.title));
+    },
+  },
+  User: {
+    photo: (user: User) => {
+      return getSiteUrl() + "/_layouts/15/userphoto.aspx?size=L&username=" + user.email;
     },
   },
   Mutation: {

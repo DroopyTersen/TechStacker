@@ -68,6 +68,7 @@ export default gql`
     value: Int
     userId: Int
     user: User
+    label: String
   }
 
   input RatingInput {
@@ -79,10 +80,6 @@ export default gql`
     email: String
     name: String!
     photo: String
-    department: String
-    jobTitle: String
-    office: String
-    comments: [Comment]
   }
 
   type Comment {
